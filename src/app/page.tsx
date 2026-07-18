@@ -1,17 +1,23 @@
 import NavBar from "@/components/NavBar";
 import ProjectCard from "@/components/ProjectCard";
 
-const skills = [
-  "Python",
-  "Kotlin",
-  "Java",
-  "SQL",
-  "Git",
-  "Android",
-  "Compose",
-  "Supabase",
-  "TensorFlow",
-  "PyTorch",
+const skillGroups = [
+  {
+    label: "Mobile & Frontend",
+    skills: ["Kotlin", "Android", "Jetpack Compose", "Material Design"],
+  },
+  {
+    label: "AI & Data",
+    skills: ["Python", "TensorFlow", "PyTorch", "YOLO"],
+  },
+  {
+    label: "Backend & Database",
+    skills: ["Supabase", "Firebase", "SQL", "REST API"],
+  },
+  {
+    label: "Tools & Workflow",
+    skills: ["Git", "GitHub", "Docker", "Figma"],
+  },
 ];
 
 const projects = [
@@ -133,26 +139,26 @@ export default function Home() {
               <h2 className="mt-3 text-3xl font-semibold text-white">Giới thiệu ngắn gọn</h2>
             </div>
             <p className="max-w-2xl text-sm text-slate-400 xl:text-right">
-              Tôi thích xây dựng sản phẩm tập trung vào người dùng, có tính thực tế, dễ triển khai và dễ trình bày khi ứng tuyển.
+              Sinh viên CNTT Đại học Nha Trang, xây dựng ứng dụng Android và giải pháp AI có thể trình bày nhanh cho HR.
             </p>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
               <p className="text-slate-300 leading-8">
-                Hiện là sinh viên Công nghệ phần mềm Đại học Nha Trang, tôi tập trung vào ứng dụng Android và AI thực tế. Portfolio này trình bày dự án rõ ràng để HR nhanh hiểu năng lực và sản phẩm của tôi.
+                Tôi đang học năm cuối chuyên ngành Công nghệ phần mềm. Tôi tập trung tạo sản phẩm có giá trị thực tế, dễ dùng và dễ trình bày, đồng thời có cấu trúc code rõ ràng.
               </p>
             </div>
-            <div className="space-y-4">
+            <div className="grid gap-4">
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Focus</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Giá trị</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  Xây dựng app mobile, backend đơn giản và AI proof-of-concept, phù hợp bài tập lớn, demo nhanh và thực tập.
+                  Dự án có thể mở nhanh, demo trực tiếp và nói được rõ vai trò của mình trong sản phẩm.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Approach</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Mục tiêu</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  Thiết kế portfolio tối giản, hiệu năng cao, dễ đọc và dễ mở nhanh trên điện thoại hoặc máy tính.
+                  Ứng tuyển thực tập / junior tại FPT, tham gia dự án Android hoặc AI với tư duy sản phẩm.
                 </p>
               </div>
             </div>
@@ -165,15 +171,22 @@ export default function Home() {
               <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Skills</p>
               <h2 className="mt-3 text-3xl font-semibold text-white">Kỹ năng công nghệ</h2>
             </div>
-            <p className="text-sm text-slate-400">Thể hiện các công nghệ phù hợp với dự án và vị trí.</p>
+            <p className="text-sm text-slate-400">Kỹ năng được nhóm rõ ràng theo hướng sản phẩm và công nghệ.</p>
           </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-            {skills.map((skill) => (
-              <div
-                key={skill}
-                className="rounded-3xl border border-white/10 bg-slate-900/60 px-5 py-4 text-center text-sm font-semibold text-white shadow-sm shadow-slate-950/20"
-              >
-                {skill}
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            {skillGroups.map((group) => (
+              <div key={group.label} className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-sm shadow-slate-950/20">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">{group.label}</p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-slate-100"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -189,15 +202,33 @@ export default function Home() {
               Đại học Nha Trang, chuyên ngành Công nghệ phần mềm, với định hướng học tập và dự án thực chiến.
             </p>
           </div>
-          <div className="mt-10 rounded-3xl border border-white/10 bg-slate-950/60 p-8">
-            <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Đại học</p>
-            <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
+          <div className="mt-10 grid gap-6 xl:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Đại học</p>
+              <div className="mt-4">
                 <h3 className="text-2xl font-semibold text-white">Đại học Nha Trang</h3>
                 <p className="mt-2 text-slate-300">Chuyên ngành Công nghệ phần mềm</p>
+                <div className="mt-4 inline-flex rounded-3xl bg-slate-900/80 px-4 py-3 text-sm text-slate-300">
+                  GPA 3.25 • 2022 - 2026
+                </div>
               </div>
-              <div className="rounded-3xl bg-slate-900/80 px-4 py-3 text-sm text-slate-300">
-                GPA 3.25 • 2022 - 2026
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Relevant coursework</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Mobile App Development",
+                  "Machine Learning",
+                  "Database Systems",
+                  "Software Engineering",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -247,17 +278,6 @@ export default function Home() {
               </a>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
-              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Facebook</p>
-              <a
-                href="https://facebook.com/duyluan03"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 block text-lg font-semibold text-sky-400"
-              >
-                facebook.com/duyluan03
-              </a>
-            </div>
-            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">LinkedIn</p>
               <a
                 href="https://linkedin.com/in/duyluan2107"
@@ -267,6 +287,10 @@ export default function Home() {
               >
                 linkedin.com/in/duyluan2107
               </a>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Location</p>
+              <p className="mt-3 text-lg font-semibold text-white">Quận 8, TP. HCM</p>
             </div>
           </div>
         </section>
