@@ -18,19 +18,19 @@ const projects = [
   {
     title: "VocabLensAI",
     description:
-      "Android app hỗ trợ học từ vựng tiếng Anh bằng camera, flashcards và bộ nhớ đám mây. Tích hợp quét từ, lưu từ và quản lý tiến trình học.",
+      "Ứng dụng Android giúp học từ vựng tiếng Anh bằng camera OCR, flashcard và đồng bộ Supabase. Thiết kế để học nhanh, lưu từ và kiểm tra tiến trình học.",
     tags: ["Kotlin", "Compose", "Supabase", "YOLO"],
     screenshot: "/vocablens-screenshot.svg",
-    githubUrl: "https://github.com/your-username/vocablens-ai",
+    githubUrl: "https://github.com/DuyLuan2107/vocablens-ai",
     apkUrl: "/vocablens.apk",
   },
   {
     title: "Lung X-ray AI",
     description:
-      "Hệ thống phân tích ảnh X-ray phổi với GradCAM và UNet để hỗ trợ giai đoạn proof-of-concept nghiên cứu mô hình AI y tế.",
+      "Proof-of-concept AI cho phân tích X-ray phổi với GradCAM và UNet. Hỗ trợ trực quan hóa vùng tổn thương và tối ưu mô hình y tế.",
     tags: ["Python", "TensorFlow", "PyTorch", "UNet"],
     screenshot: "/lungxray-screenshot.svg",
-    githubUrl: "https://github.com/your-username/lung-xray-ai",
+    githubUrl: "https://github.com/DuyLuan2107/lung-xray-ai",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Home() {
                 Software Engineering Student · Android Developer · AI Developer
               </p>
               <p className="text-base leading-8 text-slate-300 sm:text-lg">
-                Tôi xây dựng portfolio rõ ràng, sản phẩm thực tế và trải nghiệm hiện đại để HR đọc nhanh, hiểu đúng năng lực.
+                Tôi xây dựng portfolio rõ ràng với dự án thực tế, mô tả ngắn gọn và sản phẩm có thể mở nhanh khi HR hỏi.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
                 Download CV
               </a>
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/DuyLuan2107"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
@@ -139,20 +139,20 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
               <p className="text-slate-300 leading-8">
-                Hiện là sinh viên Công nghệ phần mềm tại Đại học Nha Trang, đam mê Android và AI. Tôi phát triển dự án có tính minh hoạ cao cho HR, giúp trình bày năng lực một cách trực quan.
+                Hiện là sinh viên Công nghệ phần mềm tại Đại học Nha Trang, tôi tập trung vào sản phẩm Android và AI có giá trị thực tế. Portfolio này trình bày dự án rõ ràng để HR hiểu đúng năng lực kỹ thuật.
               </p>
             </div>
             <div className="space-y-4">
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Focus</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  App mobile + backend nhẹ + AI model proof-of-concept.
+                  Xây dựng app mobile, backend cơ bản và AI proof-of-concept, phù hợp bài tập lớn và thực tập.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Approach</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  Thiết kế portfolio tĩnh, hiệu năng cao và dễ đọc, phù hợp mở nhanh trên điện thoại hoặc máy tính.
+                  Thiết kế portfolio tối giản, hiệu năng cao và dễ đọc, phù hợp mở nhanh trên điện thoại hoặc máy tính.
                 </p>
               </div>
             </div>
@@ -233,17 +233,17 @@ export default function Home() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Email</p>
-              <p className="mt-3 text-lg font-semibold text-white">duyluan@example.com</p>
+              <p className="mt-3 text-lg font-semibold text-white">hello@duyluan.dev</p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">GitHub</p>
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/DuyLuan2107"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 block text-lg font-semibold text-sky-400"
               >
-                github.com/your-username
+                github.com/DuyLuan2107
               </a>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">

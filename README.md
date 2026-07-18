@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# duyluan-portfolio
 
-## Getting Started
+Portfolio cá nhân của Duy Luân, sinh viên Công nghệ phần mềm Đại học Nha Trang.
 
-First, run the development server:
+Website trình bày:
+- Profile, kỹ năng, học vấn
+- Dự án Android và AI
+- Liên hệ nhanh cho HR
+
+Live demo: https://duyluan-portfolio-taupe.vercel.app/
+
+## Công nghệ
+
+- Next.js 16
+- TypeScript
+- Tailwind CSS
+- Vercel
+
+## Chạy local
 
 ```bash
+cd D:\PortPolio\portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cấu trúc chính
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/page.tsx` - nội dung trang chính
+- `src/app/layout.tsx` - metadata và layout chung
+- `src/app/globals.css` - styles toàn cục
+- `src/components` - component tái sử dụng
 
-## Learn More
+## Cập nhật nhanh
 
-To learn more about Next.js, take a look at the following resources:
+Sửa nội dung trong `src/app/page.tsx` để thay text, link, project và thông tin liên hệ.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Liên hệ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub: https://github.com/DuyLuan2107
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: hello@duyluan.dev
