@@ -50,7 +50,7 @@ export default function Home() {
                 Software Engineering Student · Android Developer · AI Developer
               </p>
               <p className="text-base leading-8 text-slate-300 sm:text-lg">
-                Tôi xây dựng portfolio rõ ràng với dự án thực tế, mô tả ngắn gọn và sản phẩm có thể mở nhanh khi HR hỏi.
+                Tôi xây dựng portfolio rõ ràng, sản phẩm thực tế và demo nhanh để HR dễ đánh giá năng lực khi ứng tuyển.
               </p>
             </div>
 
@@ -139,20 +139,20 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
               <p className="text-slate-300 leading-8">
-                Hiện là sinh viên Công nghệ phần mềm tại Đại học Nha Trang, tôi tập trung vào sản phẩm Android và AI có giá trị thực tế. Portfolio này trình bày dự án rõ ràng để HR hiểu đúng năng lực kỹ thuật.
+                Hiện là sinh viên Công nghệ phần mềm Đại học Nha Trang, tôi tập trung vào ứng dụng Android và AI thực tế. Portfolio này trình bày dự án rõ ràng để HR nhanh hiểu năng lực và sản phẩm của tôi.
               </p>
             </div>
             <div className="space-y-4">
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Focus</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  Xây dựng app mobile, backend cơ bản và AI proof-of-concept, phù hợp bài tập lớn và thực tập.
+                  Xây dựng app mobile, backend đơn giản và AI proof-of-concept, phù hợp bài tập lớn, demo nhanh và thực tập.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Approach</p>
                 <p className="mt-3 text-slate-300 leading-8">
-                  Thiết kế portfolio tối giản, hiệu năng cao và dễ đọc, phù hợp mở nhanh trên điện thoại hoặc máy tính.
+                  Thiết kế portfolio tối giản, hiệu năng cao, dễ đọc và dễ mở nhanh trên điện thoại hoặc máy tính.
                 </p>
               </div>
             </div>
@@ -249,23 +249,23 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Facebook</p>
               <a
-                href="https://facebook.com/your-profile"
+                href="https://facebook.com/duyluan03"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 block text-lg font-semibold text-sky-400"
               >
-                facebook.com/your-profile
+                facebook.com/duyluan03
               </a>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">LinkedIn</p>
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://linkedin.com/in/duyluan2107"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 block text-lg font-semibold text-sky-400"
               >
-                linkedin.com/in/your-profile
+                linkedin.com/in/duyluan2107
               </a>
             </div>
           </div>
