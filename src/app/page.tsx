@@ -1,64 +1,275 @@
-import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import ProjectCard from "@/components/ProjectCard";
+
+const skills = [
+  "Python",
+  "Kotlin",
+  "Java",
+  "SQL",
+  "Git",
+  "Android",
+  "Compose",
+  "Supabase",
+  "TensorFlow",
+  "PyTorch",
+];
+
+const projects = [
+  {
+    title: "VocabLensAI",
+    description:
+      "Android app hỗ trợ học từ vựng tiếng Anh bằng camera, flashcards và bộ nhớ đám mây. Tích hợp quét từ, lưu từ và quản lý tiến trình học.",
+    tags: ["Kotlin", "Compose", "Supabase", "YOLO"],
+    screenshot: "/vocablens-screenshot.svg",
+    githubUrl: "https://github.com/your-username/vocablens-ai",
+    apkUrl: "/vocablens.apk",
+  },
+  {
+    title: "Lung X-ray AI",
+    description:
+      "Hệ thống phân tích ảnh X-ray phổi với GradCAM và UNet để hỗ trợ giai đoạn proof-of-concept nghiên cứu mô hình AI y tế.",
+    tags: ["Python", "TensorFlow", "PyTorch", "UNet"],
+    screenshot: "/lungxray-screenshot.svg",
+    githubUrl: "https://github.com/your-username/lung-xray-ai",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen bg-[#0f172a] text-slate-100">
+      <NavBar />
+      <main className="mx-auto max-w-6xl px-6 pb-20 pt-8">
+        <section id="home" className="grid gap-10 pt-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-center xl:gap-16">
+          <div className="space-y-8">
+            <div className="max-w-2xl space-y-4">
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Xin chào, mình là</p>
+              <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+                Duy Luân
+              </h1>
+              <p className="text-2xl font-medium leading-tight text-slate-200 sm:text-3xl">
+                Software Engineering Student · Android Developer · AI Developer
+              </p>
+              <p className="text-base leading-8 text-slate-300 sm:text-lg">
+                Tôi xây dựng portfolio rõ ràng, sản phẩm thực tế và trải nghiệm hiện đại để HR đọc nhanh, hiểu đúng năng lực.
+              </p>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-5 text-center shadow-sm shadow-slate-950/20">
+                <p className="text-3xl font-semibold text-white">2</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.35em] text-slate-400">Dự án</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-5 text-center shadow-sm shadow-slate-950/20">
+                <p className="text-3xl font-semibold text-white">4+</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.35em] text-slate-400">Công nghệ</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-5 text-center shadow-sm shadow-slate-950/20">
+                <p className="text-3xl font-semibold text-white">2022-2026</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.35em] text-slate-400">Học vấn</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/cv.pdf"
+                download
+                className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
+              >
+                Download CV
+              </a>
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Xem GitHub
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800/80 px-6 py-3 text-sm font-semibold text-white transition hover:border-sky-400/80 hover:text-sky-300"
+              >
+                Liên hệ
+              </a>
+            </div>
+          </div>
+
+          <div className="relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-[0_45px_120px_-40px_rgba(15,23,42,0.8)]">
+            <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-sky-500/20 via-transparent to-transparent" />
+            <div className="relative flex h-full flex-col gap-5 rounded-[1.75rem] border border-white/5 bg-[#111827]/95 p-6">
+              <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-slate-900/90 px-5 py-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-800 text-3xl font-semibold text-sky-400/90">
+                  DL
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Software Engineering Student</p>
+                  <p className="mt-2 text-xl font-semibold text-white">Đại học Nha Trang</p>
+                </div>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-5">
+                  <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Specialty</p>
+                  <p className="mt-3 text-lg font-semibold text-white">Android & AI</p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-5">
+                  <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Goal</p>
+                  <p className="mt-3 text-lg font-semibold text-white">Ứng tuyển FPT / thực tập</p>
+                </div>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/95 p-5">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Quote</p>
+                <p className="mt-3 text-base leading-7 text-slate-200">
+                  Tôi muốn portfolio trở thành tài liệu mở nhanh nhất khi HR hỏi dự án, để họ thấy sản phẩm và năng lực lập trình ngay lập tức.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
+          <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">About</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Giới thiệu ngắn gọn</h2>
+            </div>
+            <p className="max-w-2xl text-sm text-slate-400 xl:text-right">
+              Tôi thích xây dựng sản phẩm tập trung vào người dùng, có tính thực tế, dễ triển khai và dễ trình bày khi ứng tuyển.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <p className="text-slate-300 leading-8">
+                Hiện là sinh viên Công nghệ phần mềm tại Đại học Nha Trang, đam mê Android và AI. Tôi phát triển dự án có tính minh hoạ cao cho HR, giúp trình bày năng lực một cách trực quan.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Focus</p>
+                <p className="mt-3 text-slate-300 leading-8">
+                  App mobile + backend nhẹ + AI model proof-of-concept.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Approach</p>
+                <p className="mt-3 text-slate-300 leading-8">
+                  Thiết kế portfolio tĩnh, hiệu năng cao và dễ đọc, phù hợp mở nhanh trên điện thoại hoặc máy tính.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="mt-24">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Skills</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Kỹ năng công nghệ</h2>
+            </div>
+            <p className="text-sm text-slate-400">Thể hiện các công nghệ phù hợp với dự án và vị trí.</p>
+          </div>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            {skills.map((skill) => (
+              <div
+                key={skill}
+                className="rounded-3xl border border-white/10 bg-slate-900/60 px-5 py-4 text-center text-sm font-semibold text-white shadow-sm shadow-slate-950/20"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="education" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Education</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Học vấn</h2>
+            </div>
+            <p className="max-w-xl text-sm text-slate-400 lg:text-right">
+              Đại học Nha Trang, chuyên ngành Công nghệ phần mềm, với định hướng học tập và dự án thực chiến.
+            </p>
+          </div>
+          <div className="mt-10 rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+            <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Đại học</p>
+            <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="text-2xl font-semibold text-white">Đại học Nha Trang</h3>
+                <p className="mt-2 text-slate-300">Chuyên ngành Công nghệ phần mềm</p>
+              </div>
+              <div className="rounded-3xl bg-slate-900/80 px-4 py-3 text-sm text-slate-300">
+                GPA 3.25 • 2022 - 2026
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="mt-24">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Projects</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Dự án tiêu biểu</h2>
+            </div>
+            <p className="max-w-xl text-sm text-slate-400 md:text-right">
+              Hai dự án minh họa năng lực Android và AI, thể hiện phần mềm và giải pháp kỹ thuật.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-8 xl:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
+        </section>
+
+        <section id="contact" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Contact</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Liên hệ</h2>
+            </div>
+            <p className="max-w-xl text-sm text-slate-400 md:text-right">
+              Email, GitHub và LinkedIn để HR dễ mở ngay khi cần liên hệ.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Email</p>
+              <p className="mt-3 text-lg font-semibold text-white">duyluan@example.com</p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">GitHub</p>
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 block text-lg font-semibold text-sky-400"
+              >
+                github.com/your-username
+              </a>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Facebook</p>
+              <a
+                href="https://facebook.com/your-profile"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 block text-lg font-semibold text-sky-400"
+              >
+                facebook.com/your-profile
+              </a>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">LinkedIn</p>
+              <a
+                href="https://linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 block text-lg font-semibold text-sky-400"
+              >
+                linkedin.com/in/your-profile
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
