@@ -352,12 +352,12 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
               <p className="text-sm uppercase tracking-[0.35em] text-slate-400">LinkedIn</p>
               <a
-                href="https://linkedin.com/in/duyluan2107"
+                href="https://www.linkedin.com/in/lu%C3%A2n-duy-743a39422/"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 block text-lg font-semibold text-sky-400"
               >
-                linkedin.com/in/duyluan2107
+                linkedin.com/in/lu%C3%A2n-duy-743a39422
               </a>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-slate-200">
