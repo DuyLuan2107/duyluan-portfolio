@@ -24,9 +24,16 @@ const projects = [
   {
     title: "VocabLensAI",
     description:
-      "Ứng dụng Android giúp học từ vựng tiếng Anh bằng camera OCR, flashcard và đồng bộ Supabase. Thiết kế để học nhanh, lưu từ và kiểm tra tiến trình học.",
+      "Android app học từ vựng tiếng Anh qua camera OCR, flashcards và Supabase cloud sync. Thiết kế để thể hiện năng lực Android, AI và product thinking.",
+    highlights: [
+      "Camera OCR vocabulary capture giúp quét từ nhanh chóng",
+      "Spaced repetition flashcards với thuật toán SM-2",
+      "Đồng bộ dữ liệu đám mây Supabase và truy vấn offline-first",
+      "Project docs & testing notes sẵn sàng cho reviewer",
+    ],
     tags: ["Kotlin", "Compose", "Supabase", "YOLO"],
     screenshot: "/vocablens-screenshot.svg",
+    docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/PROJECT_OVERVIEW.md",
     githubUrl: "https://github.com/DuyLuan2107/vocablens-ai",
     apkUrl: "/vocablens.apk",
   },
@@ -34,8 +41,14 @@ const projects = [
     title: "Lung X-ray AI",
     description:
       "Proof-of-concept AI cho phân tích X-ray phổi với GradCAM và UNet. Hỗ trợ trực quan hóa vùng tổn thương và tối ưu mô hình y tế.",
+    highlights: [
+      "Visualize model attention with GradCAM",
+      "Use UNet-based segmentation for lung analysis",
+      "Focus on explainable AI and medical imaging workflows",
+    ],
     tags: ["Python", "TensorFlow", "PyTorch", "UNet"],
     screenshot: "/lungxray-screenshot.svg",
+    docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/AI_PIPELINE.md",
     githubUrl: "https://github.com/DuyLuan2107/lung-xray-ai",
   },
 ];

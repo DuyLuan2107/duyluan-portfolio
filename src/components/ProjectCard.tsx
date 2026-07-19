@@ -3,8 +3,10 @@ import Image from "next/image";
 interface ProjectCardProps {
   title: string;
   description: string;
+  highlights?: string[];
   tags: string[];
   screenshot: string;
+  docsUrl?: string;
   demoUrl?: string;
   githubUrl: string;
   apkUrl?: string;
@@ -13,8 +15,10 @@ interface ProjectCardProps {
 export default function ProjectCard({
   title,
   description,
+  highlights,
   tags,
   screenshot,
+  docsUrl,
   demoUrl,
   githubUrl,
   apkUrl,
@@ -38,7 +42,17 @@ export default function ProjectCard({
           <h3 className="mt-3 text-2xl font-semibold text-white">{title}</h3>
         </div>
         <p className="text-sm leading-7 text-slate-300">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        {highlights ? (
+          <ul className="mt-4 space-y-2 text-sm text-slate-300">
+            {highlights.map((highlight) => (
+              <li key={highlight} className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400" />
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        <div className="mt-5 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -48,7 +62,17 @@ export default function ProjectCard({
             </span>
           ))}
         </div>
-        <div className="flex flex-wrap gap-3 pt-2">
+        <div className="flex flex-wrap gap-3 pt-4">
+          {docsUrl ? (
+            <a
+              href={docsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Project docs
+            </a>
+          ) : null}
           {demoUrl ? (
             <a
               href={demoUrl}
