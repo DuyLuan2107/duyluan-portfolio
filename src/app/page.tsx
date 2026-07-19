@@ -234,6 +234,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="goals" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Goals</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Internship & Achievements</h2>
+            </div>
+            <p className="max-w-xl text-sm text-slate-400 lg:text-right">
+              Mục tiêu thực tập rõ ràng, đạt thành tựu bằng sản phẩm và kinh nghiệm học hỏi.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 xl:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Internship goal</p>
+              <p className="mt-4 text-slate-300 leading-8">
+                Ứng tuyển vị trí thực tập Android/AI tại FPT hoặc công ty phần mềm, mong muốn tham gia dự án sản phẩm thực tế, gia tăng kinh nghiệm teamwork và quy trình phát triển chuyên nghiệp.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Key achievements</p>
+              <ul className="mt-4 list-inside space-y-3 text-slate-300">
+                <li>Phát triển VocabLensAI: app học từ vựng camera OCR + Supabase.</li>
+                <li>Xây dựng Lung X-ray AI: phân tích ảnh y tế với GradCAM và UNet.</li>
+                <li>Ứng dụng Git workflow, code review và tối ưu UI/UX mobile.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section id="projects" className="mt-24">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
