@@ -234,6 +234,50 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="docs" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Docs</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">Project Documentation</h2>
+            </div>
+            <p className="max-w-xl text-sm text-slate-400 lg:text-right">
+              Full project docs for technical review, architecture, AI pipeline and interview prep.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 xl:grid-cols-3">
+            {[
+              {
+                title: "Design & Architecture",
+                description: "System architecture, component flow and tech stack overview.",
+                url: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/ARCHITECTURE.md",
+              },
+              {
+                title: "AI Pipeline",
+                description: "Model flow, inference strategy and data processing.",
+                url: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/AI_PIPELINE.md",
+              },
+              {
+                title: "Interview Prep",
+                description: "Technical questions, project talking points and testing notes.",
+                url: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/INTERVIEW.md",
+              },
+            ].map((card) => (
+              <div key={card.title} className="rounded-3xl border border-white/10 bg-slate-950/60 p-8">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-400">{card.title}</p>
+                <p className="mt-4 text-slate-300 leading-7">{card.description}</p>
+                <a
+                  href={card.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
+                >
+                  Read doc
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section id="goals" className="mt-24 rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 shadow-xl shadow-slate-950/20">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>

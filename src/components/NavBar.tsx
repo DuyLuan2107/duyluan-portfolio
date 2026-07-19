@@ -5,6 +5,7 @@ export default function NavBar() {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
+    { label: "Docs", href: "#docs" },
     { label: "Goals", href: "#goals" },
     { label: "Contact", href: "#contact" },
   ];

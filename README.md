@@ -32,6 +32,19 @@ Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt.
 - `src/app/layout.tsx` - metadata và layout chung
 - `src/app/globals.css` - styles toàn cục
 - `src/components` - component tái sử dụng
+- `docs/` - tài liệu dự án chuyên sâu cho review kỹ thuật
+
+## Project documentation
+
+Các tài liệu quan trọng có trong thư mục `docs/`:
+- `README.md` - tổng quan dự án
+- `CV_SUMMARY.md` - tóm tắt profile ứng viên
+- `FEATURES.md` - tính năng chính
+- `ARCHITECTURE.md` - kiến trúc hệ thống
+- `AI_PIPELINE.md` - pipeline AI
+- `INTERVIEW.md` - điểm phỏng vấn
+- `PROJECT_OVERVIEW.md` - giới thiệu toàn bộ dự án
+- `USER_TESTER_GUIDE.md` - hướng dẫn chạy và test
 
 ## Cập nhật nhanh
 
