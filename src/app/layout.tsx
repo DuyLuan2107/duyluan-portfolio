@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "software engineering",
     "Android",
     "AI",
-    "FPT",
     "CV",
   ],
 };

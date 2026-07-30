@@ -75,10 +75,10 @@ const projects = [
       "Giao diện chuẩn MVVM, Offline-first với Room DB"
     ],
     tags: ["Kotlin", "Jetpack Compose", "TensorFlow Lite", "Firebase"],
-    screenshot: "/Portfolio_Assets/Screenshots/01_home_dashboard.png",
+    screenshot: "/screenshots/01_home_dashboard.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/PROJECT_OVERVIEW.md",
     githubUrl: "https://github.com/DuyLuan2107/vocablens-ai",
-    apkUrl: "/Portfolio_Assets/vocablens.apk",
+    apkUrl: "/vocablens.apk",
   },
   {
     title: "Lung X-ray AI Classification",
@@ -94,6 +94,20 @@ const projects = [
     screenshot: "/lungxray-mockup.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/AI_PIPELINE.md",
     githubUrl: "https://github.com/DuyLuan2107/lung-xray-ai",
+  },
+  {
+    title: "AI Fitness Form Coach",
+    description:
+      "Ứng dụng Android chạy offline hỗ trợ lên lịch tập luyện và sửa tư thế tập (Squat, Push-up, Plank) thời gian thực bằng mô hình Pose Estimation trên thiết bị.",
+    highlights: [
+      "Phát hiện khớp và tư thế khớp thời gian thực với MediaPipe/MLKit",
+      "Gợi ý sửa tư thế bằng giọng nói và hiển thị visual trực quan",
+      "Lưu trữ lịch sử và tiến độ luyện tập offline 100% qua Room DB"
+    ],
+    tags: ["Kotlin", "Jetpack Compose", "MediaPipe", "MLKit", "Room DB"],
+    screenshot: "/fitness-mockup.png",
+    docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/ARCHITECTURE.md",
+    githubUrl: "https://github.com/DuyLuan2107/AIFitnessCoach",
   },
 ];
 
@@ -373,7 +387,7 @@ export default function Home() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400 font-bold">03</div>
                 <h3 className="text-lg font-bold text-white">Sẵn sàng cống hiến</h3>
                 <p className="text-xs leading-6 text-slate-400">
-                  Mong muốn được thực tập/làm việc tại FPT để cọ xát với các dự án lớn, học hỏi quy trình chuyên nghiệp và đóng góp giá trị của bản thân.
+                  Mong muốn được thực tập/làm việc tại các công ty công nghệ để cọ xát với các dự án lớn, học hỏi quy trình chuyên nghiệp và đóng góp giá trị của bản thân.
                 </p>
               </div>
             </div>
@@ -674,7 +688,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold text-white">Mục tiêu thực tập</h3>
                 <p className="text-xs leading-6 text-slate-400">
-                  Tôi mong muốn ứng tuyển vị trí Thực tập sinh/Junior phát triển ứng dụng di động Android hoặc Trí tuệ Nhân tạo tại FPT. Định hướng học hỏi thực chiến, cọ xát môi trường doanh nghiệp lớn và đóng góp năng lực lập trình của mình vào dự án.
+                  Tôi mong muốn ứng tuyển vị trí Thực tập sinh/Junior phát triển ứng dụng di động Android hoặc Trí tuệ Nhân tạo tại các doanh nghiệp công nghệ hàng đầu. Định hướng học hỏi thực chiến, cọ xát môi trường chuyên nghiệp và đóng góp năng lực lập trình của mình vào dự án.
                 </p>
               </div>
 
