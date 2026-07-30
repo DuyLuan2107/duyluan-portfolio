@@ -92,11 +92,11 @@ const featureCategories: FeatureCategory[] = [
     icon: "⚔️",
     tagline: "Trận chiến PvP thời gian thực & Xếp hạng giải đấu",
     description: "Thúc đẩy động lực học tập bằng yếu tố Gamification thông qua các trận đấu PvP thời gian thực và hệ thống giải đấu tuần cạnh tranh khốc liệt.",
-    techStack: ["Firebase Firestore", "Real-time Matchmaking", "Chess.com-style Analytics", "Bot Fallback Engine"],
+    techStack: ["Firebase Firestore", "Real-time Matchmaking", "chess-style analytics", "Bot Fallback Engine"],
     highlights: [
       "Ghép trận PvP trực tiếp (ArenaMatchmaking): Ghép cặp người chơi online có cùng mức rank Elo trong vòng 10 giây. Tự động kích hoạt Bot thông minh để ghép cặp nếu không tìm thấy đối thủ.",
       "So tài từ vựng 1v1 (Live PvP Battle): Hai người chơi cùng trả lời nhanh bộ từ vựng dưới áp lực thời gian thực để giành điểm hạ gục đối thủ.",
-      "Phân tích trận đấu chuyên sâu (Game Review): Phân tích chi tiết từng câu trả lời đúng/sai của người học (Genius ⚡, Good, Blunder ⚠️) tương tự Chess.com.",
+      "Phân tích trận đấu chuyên sâu (Game Review): Phân tích chi tiết từng câu trả lời đúng/sai của người học (Genius ⚡, Good, Blunder ⚠️) tương tự như phân tích cờ vua.",
       "Nhận xét AI Coach (Arena Coach Review): Trợ lý ảo AI đọc kết quả trận đấu, phân tích điểm yếu và đưa ra giáo trình ôn luyện tùy biến.",
       "Weekly League (Xếp hạng tuần): Hệ thống giải đấu phân hạng Đồng, Bạc, Vàng. Top 3 sẽ được thăng hạng, bottom 3 bị rớt hạng vào cuối tuần.",
       "Chế độ Sinh Tồn (Speedrun Survival): Thử thách trả lời nhanh không giới hạn thời gian với tối đa 3 mạng để cạnh tranh điểm số trên Bảng xếp hạng sự kiện."
