@@ -1,5 +1,6 @@
 import NavBar from "@/components/NavBar";
 import ProjectCard from "@/components/ProjectCard";
+import ProjectShowcase from "@/components/ProjectShowcase";
 
 const skillGroups = [
   {
@@ -24,30 +25,30 @@ const projects = [
   {
     title: "VocabLensAI",
     description:
-      "Android app học từ vựng tiếng Anh qua camera OCR, flashcards và Supabase cloud sync. Thiết kế để thể hiện năng lực Android, AI và product thinking.",
+      "Nền tảng học tiếng Anh Native Android tích hợp AI trên thiết bị. Quét vật thể thực tế qua Camera để học từ vựng, tạo câu chuyện ngữ cảnh với Gemini API và ôn tập bằng thuật toán Spaced Repetition (SM-2).",
     highlights: [
-      "Camera OCR vocabulary capture giúp quét từ nhanh chóng",
-      "Spaced repetition flashcards với thuật toán SM-2",
-      "Đồng bộ dữ liệu đám mây Supabase và truy vấn offline-first",
-      "Project docs & testing notes sẵn sàng cho reviewer",
+      "Nhận diện vật thể Real-time với CameraX & TensorFlow Lite",
+      "Ôn tập từ vựng khoa học với thuật toán SM-2",
+      "Đấu trường PvP Arena thời gian thực bằng Firebase",
+      "Giao diện chuẩn MVVM, Offline-first với Room DB"
     ],
-    tags: ["Kotlin", "Compose", "Supabase", "YOLO"],
-    screenshot: "/vocablens-screenshot.svg",
+    tags: ["Kotlin", "Jetpack Compose", "TensorFlow Lite", "Firebase"],
+    screenshot: "/vocablens-mockup.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/PROJECT_OVERVIEW.md",
     githubUrl: "https://github.com/DuyLuan2107/vocablens-ai",
     apkUrl: "/vocablens.apk",
   },
   {
-    title: "Lung X-ray AI",
+    title: "Lung X-ray AI Classification",
     description:
-      "Proof-of-concept AI cho phân tích X-ray phổi với GradCAM và UNet. Hỗ trợ trực quan hóa vùng tổn thương và tối ưu mô hình y tế.",
+      "Hệ thống phân tích và chẩn đoán ảnh X-quang phổi y tế. Ứng dụng kỹ thuật phân vùng (Segmentation-guided Masking) để tự động tách vùng phổi, giúp AI tập trung chẩn đoán chính xác khu vực tổn thương.",
     highlights: [
-      "Visualize model attention with GradCAM",
-      "Use UNet-based segmentation for lung analysis",
-      "Focus on explainable AI and medical imaging workflows",
+      "Đạt điểm xuất sắc 9.1/10 cho Đồ án tốt nghiệp Đại học",
+      "Tách nền phổi tự động với U-Net Segmentation",
+      "Chẩn đoán bệnh lý độ chính xác cao với ResNet/DenseNet",
     ],
-    tags: ["Python", "TensorFlow", "PyTorch", "UNet"],
-    screenshot: "/lungxray-screenshot.svg",
+    tags: ["Python", "TensorFlow", "OpenCV", "U-Net"],
+    screenshot: "/lungxray-mockup.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/AI_PIPELINE.md",
     githubUrl: "https://github.com/DuyLuan2107/lung-xray-ai",
   },
@@ -319,20 +320,59 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="mt-24">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <section id="projects" className="mt-24 space-y-16">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-white/10 pb-6">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-sky-400/90">Projects</p>
               <h2 className="mt-3 text-3xl font-semibold text-white">Dự án tiêu biểu</h2>
             </div>
             <p className="max-w-xl text-sm text-slate-400 md:text-right">
-              Hai dự án minh họa năng lực Android và AI, thể hiện phần mềm và giải pháp kỹ thuật.
+              Các dự án thực chiến nổi bật tích hợp AI, Mobile và khoa học máy tính.
             </p>
           </div>
-          <div className="mt-8 grid gap-8 xl:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
+
+          {/* Project 1 Showcase: VocabLensAI */}
+          <div className="space-y-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-400">Featured Project</span>
+                <h3 className="text-3xl font-bold text-white mt-1">VocabLensAI</h3>
+                <p className="text-slate-300 mt-2 max-w-2xl text-sm leading-7">
+                  Hệ sinh thái học từ vựng tiếng Anh thông minh với Edge AI (TFLite) trên thiết bị, 
+                  tích hợp đàm thoại và sinh truyện tự động (Gemini API), ôn tập lặp lại giãn cách (SM-2) 
+                  và đấu trường PvP trực tuyến (Firebase).
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://github.com/DuyLuan2107/vocablens-ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  GitHub Repository
+                </a>
+                <a
+                  href="/Portfolio_Assets/vocablens.apk"
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-400"
+                >
+                  Tải APK Trải Nghiệm
+                </a>
+              </div>
+            </div>
+
+            <ProjectShowcase />
+          </div>
+
+          {/* Other Projects */}
+          <div className="space-y-8 pt-8 border-t border-white/10">
+            <h4 className="text-xl font-bold text-white">Dự án Nghiên cứu & Trí Tuệ Nhân Tạo khác</h4>
+            <div className="grid gap-8">
+              {projects.filter(p => p.title !== "VocabLensAI").map((project) => (
+                <ProjectCard key={project.title} {...project} />
+              ))}
+            </div>
           </div>
         </section>
 
