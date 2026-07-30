@@ -418,7 +418,7 @@ export default function Home() {
           </motion.div>
 
           {/* Project 1: VocabLensAI (Stunning Interactive Product Tour) */}
-          <div className="space-y-8">
+          <div id="vocablensai" className="space-y-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -439,15 +439,12 @@ export default function Home() {
               </div>
               
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://github.com/DuyLuan2107/vocablens-ai"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/10"
+                <span
+                  className="flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/5 px-5 py-3 text-xs font-bold uppercase tracking-wider text-yellow-400 cursor-help"
+                  title="Private Repository - Access can be shared upon request"
                 >
-                  <Github size={14} />
-                  Mã nguồn GitHub
-                </a>
+                  Private Repo
+                </span>
                 <a
                   href="/Portfolio_Assets/vocablens.apk"
                   download
@@ -478,17 +475,21 @@ export default function Home() {
             </h4>
             
             <div className="grid gap-8">
-              {projects.filter(p => p.title !== "VocabLensAI").map((project, idx) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.15 }}
-                >
-                  <ProjectCard {...project} />
-                </motion.div>
-              ))}
+              {projects.filter(p => p.title !== "VocabLensAI").map((project, idx) => {
+                const id = project.title === "Lung X-ray AI Classification" ? "lungxray" : "fitnesscoach";
+                return (
+                  <motion.div
+                    id={id}
+                    key={project.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: idx * 0.15 }}
+                  >
+                    <ProjectCard {...project} />
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
