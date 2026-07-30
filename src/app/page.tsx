@@ -61,6 +61,11 @@ const skillGroups = [
     icon: <Award className="text-purple-400" size={18} />,
     skills: ["Git / GitHub Flow", "Docker", "Figma (UI/UX)", "LaTeX (CV crafting)", "Markdown Docs"],
   },
+  {
+    label: "AI-Assisted Dev",
+    icon: <MessageSquare className="text-sky-400" size={18} />,
+    skills: ["Google Antigravity", "OpenAI Codex", "Cursor", "Gemini/GPT Coding Agents"],
+  },
 ];
 
 const projects = [
