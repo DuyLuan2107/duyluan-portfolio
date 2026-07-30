@@ -8,7 +8,7 @@ interface ProjectCardProps {
   screenshot: string;
   docsUrl?: string;
   demoUrl?: string;
-  githubUrl: string;
+  githubUrl?: string;
   apkUrl?: string;
 }
 
@@ -83,14 +83,23 @@ export default function ProjectCard({
               Demo
             </a>
           ) : null}
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
-          >
-            GitHub
-          </a>
+          {githubUrl && githubUrl !== "private" ? (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              GitHub
+            </a>
+          ) : githubUrl === "private" ? (
+            <span
+              className="inline-flex items-center justify-center rounded-full border border-yellow-500/30 bg-yellow-500/5 px-4 py-2 text-sm font-semibold text-yellow-400 cursor-help"
+              title="Private Repository - Access can be shared upon request"
+            >
+              Private Repo
+            </span>
+          ) : null}
           {apkUrl ? (
             <a
               href={apkUrl}

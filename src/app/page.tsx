@@ -64,7 +64,7 @@ const skillGroups = [
   {
     label: "AI-Assisted Dev",
     icon: <MessageSquare className="text-sky-400" size={18} />,
-    skills: ["Google Antigravity", "OpenAI Codex", "Cursor", "Gemini/GPT Coding Agents"],
+    skills: ["Google Antigravity", "OpenAI Codex"],
   },
 ];
 
@@ -82,7 +82,7 @@ const projects = [
     tags: ["Kotlin", "Jetpack Compose", "TensorFlow Lite", "Firebase"],
     screenshot: "/screenshots/01_home_dashboard.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/PROJECT_OVERVIEW.md",
-    githubUrl: "https://github.com/DuyLuan2107/vocablens-ai",
+    githubUrl: "private",
     apkUrl: "/vocablens.apk",
   },
   {
@@ -112,7 +112,7 @@ const projects = [
     tags: ["Kotlin", "Jetpack Compose", "MediaPipe", "MLKit", "Room DB"],
     screenshot: "/fitness-mockup.png",
     docsUrl: "https://github.com/DuyLuan2107/duyluan-portfolio/blob/main/docs/ARCHITECTURE.md",
-    githubUrl: "https://github.com/DuyLuan2107/AIFitnessCoach",
+    githubUrl: "private",
   },
 ];
 
