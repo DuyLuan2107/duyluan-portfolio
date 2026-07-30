@@ -114,28 +114,24 @@
       \resumeProjectHeading
           {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{VocabLensAI}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
           \resumeItemListStart
-             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, Coroutines/Flow, Room DB, CameraX, TensorFlow Lite, Gemini API, Firebase, Supabase.}
-            \resumeItem{Architected and developed an offline-first Android application from scratch using Kotlin, Jetpack Compose, MVVM, and clean code practices.}
-            \resumeItem{Implemented real-time on-device object detection using CameraX and a lightweight TensorFlow Lite model, integrating Gemini AI to generate contextual learning stories and analyze pronunciation.}
-            \resumeItem{Designed a custom learning engine incorporating the SM-2 Spaced Repetition algorithm for automated review scheduling, utilizing Room DB and Firestore for hybrid offline-first progress syncing.}
-            \resumeItem{Built a real-time multiplayer PvP Arena using Firebase Firestore with an ELO rating calculator ($K=40/20$), alongside a Chess.com-style game review UI for match accuracy analysis and AI feedback.}
+             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, Room DB, CameraX, TensorFlow Lite, Gemini API, Firebase, Supabase.}
+            \resumeItem{Developed a native offline-first Android app (Kotlin, Compose, MVVM) integrating CameraX and a lightweight TensorFlow Lite model to instantly convert real-world surroundings into vocabulary flashcards.}
+            \resumeItem{Addressed the vocabulary retention problem by designing an SM-2 Spaced Repetition engine that schedules daily reviews at optimal intervals, using a hybrid Room/Firestore background progress sync.}
+            \resumeItem{Built a real-time PvP Arena using Firebase Firestore with an ELO rating calculator, alongside a Chess.com-style game review UI displaying match accuracy and dynamic AI feedback.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Disease Classification}} $|$ \emph{Graduation Project, Nha Trang University}}{}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Python, TensorFlow/Keras, OpenCV, U-Net (Segmentation), ResNet/DenseNet (Classification).}
-            \resumeItem{Developed a segmentation-guided masking pipeline to isolate lung regions in chest X-ray images before classification, improving model focus on diagnostically relevant areas and reducing noise.}
-            \resumeItem{Trained, validated, and fine-tuned deep learning classification models, achieving a high degree of technical accuracy and a final project score of 9.1/10.}
-            \resumeItem{Documented the end-to-end workflow from data preprocessing and image augmentation to model evaluation, creating a foundation suitable for medical-imaging research handoffs.}
+            \resumeItem{Solved the classification noise problem by developing a U-Net segmentation pipeline to isolate lung regions in chest X-ray images, boosting diagnostic accuracy for ResNet/DenseNet classifiers (Score: 9.1/10).}
+            \resumeItem{Documented the end-to-end medical imaging pipeline from pre-processing to Grad-CAM heatmap visualization, preparing the project for clinical research handoffs.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach (Android)}} $|$ \emph{Personal Project}}{}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, MediaPipe/MLKit (Pose Estimation), Room DB, CameraX.}
-            \resumeItem{Developed an offline-first Android application from scratch combining personalized workout planning, exercise tracking, and real-time form feedback.}
-            \resumeItem{Implemented real-time camera-based pose estimation for squats, push-ups, and planks using MediaPipe/MLKit to extract coordinate joints and calculate movement angles.}
-            \resumeItem{Built a custom rule-based analysis engine providing instant visual corrective feedback (e.g., "Keep your back straight") and automated rep counting.}
-            \resumeItem{Designed local Room database caching for workout history, exercise metadata, and progress tracking, achieving zero-network dependency for core features.}
+            \resumeItem{Addressed the injury risk of unsupervised home workouts by implementing camera-based pose estimation (MediaPipe/MLKit) to extract joint coordinates and calculate angles in real-time.}
+            \resumeItem{Built a custom rule-based analysis engine providing instant visual corrective feedback (e.g., "Keep your back straight") and automated rep counting, caching history 100\% offline via Room DB.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
