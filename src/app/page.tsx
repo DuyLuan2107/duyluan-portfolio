@@ -162,14 +162,14 @@ export default function Home() {
                 Software Engineering Student · Android & AI Developer
               </p>
               <p className="text-base leading-8 text-slate-300 sm:text-lg max-w-xl">
-                Tôi tập trung xây dựng các ứng dụng di động Android chất lượng cao, tích hợp trí tuệ nhân tạo (Edge AI) chạy offline và đấu trường real-time. Thiết kế portfolio trực quan giúp Tech Lead/HR đánh giá năng lực nhanh nhất.
+                Tôi tập trung xây dựng các ứng dụng di động Android chất lượng cao, tích hợp trí tuệ nhân tạo (Edge AI) chạy offline và đấu trường real-time. Đam mê giải quyết bài toán thực tế bằng kiến trúc sạch và hiệu năng tối ưu.
               </p>
             </div>
 
             {/* Stats Grid */}
             <div className="grid gap-4 grid-cols-3 max-w-lg">
               <div className="rounded-2xl border border-white/5 bg-slate-900/40 p-4 text-center backdrop-blur-sm hover:border-white/10 transition duration-300">
-                <p className="text-3xl font-extrabold text-white">02</p>
+                <p className="text-3xl font-extrabold text-white">03</p>
                 <p className="mt-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Dự án lớn</p>
               </div>
               <div className="rounded-2xl border border-white/5 bg-slate-900/40 p-4 text-center backdrop-blur-sm hover:border-white/10 transition duration-300">
