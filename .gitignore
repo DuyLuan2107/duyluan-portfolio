@@ -48,6 +48,3 @@ next-env.d.ts
 *.synctex.gz
 *.fls
 *.toc
-
-# Video
-public/Portfolio_Assets/demo_video.mp4
