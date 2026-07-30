@@ -138,6 +138,10 @@ const featureCategories: FeatureCategory[] = [
   }
 ];
 
+// THAY ĐỔI ID YOUTUBE TẠI ĐÂY: Nếu bạn tải video demo lên YouTube (Không công khai / Unlisted), hãy dán ID video vào đây (ví dụ: "dQw4w9WgXcQ").
+// Nếu để rỗng (""), ứng dụng sẽ dùng tệp video cục bộ "/Portfolio_Assets/demo_video.mp4" (chỉ phát được khi chạy local).
+const YOUTUBE_VIDEO_ID = ""; 
+
 export default function ProjectShowcase() {
   const [activeTab, setActiveTab] = useState("camera_ai");
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
@@ -164,15 +168,26 @@ export default function ProjectShowcase() {
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/70 p-4 shadow-[0_30px_70px_-20px_rgba(15,23,42,0.8)] sm:p-6">
           <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-sky-500/10 via-transparent to-transparent pointer-events-none" />
           <div className="relative aspect-video w-full overflow-hidden rounded-[1.25rem] border border-white/5 bg-[#030712] shadow-inner">
-            <video
-              className="h-full w-full object-contain"
-              controls
-              preload="metadata"
-              poster="/Portfolio_Assets/Screenshots/01_home_dashboard.png"
-            >
-              <source src="/Portfolio_Assets/demo_video.mp4" type="video/mp4" />
-              Trình duyệt của bạn không hỗ trợ phát video.
-            </video>
+            {YOUTUBE_VIDEO_ID ? (
+              <iframe
+                className="h-full w-full object-contain rounded-[1.25rem]"
+                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=0&rel=0`}
+                title="VocabLensAI Live Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <video
+                className="h-full w-full object-contain"
+                controls
+                preload="metadata"
+                poster="/Portfolio_Assets/Screenshots/01_home_dashboard.png"
+              >
+                <source src="/Portfolio_Assets/demo_video.mp4" type="video/mp4" />
+                Trình duyệt của bạn không hỗ trợ phát video.
+              </video>
+            )}
           </div>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-4 px-2">
             <div className="flex items-center gap-3">
