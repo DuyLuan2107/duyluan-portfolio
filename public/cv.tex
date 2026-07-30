@@ -7,7 +7,14 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.2,0.6}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,      
+    urlcolor=darkblue,
+}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \input{glyphtounicode}
@@ -70,8 +77,8 @@
 \begin{center}
     \textbf{\Huge \scshape LE NGUYEN DUY LUAN} \\ \vspace{2pt}
     \small Mobile Developer $|$ On-device AI / Computer Vision \\ \vspace{2pt}
-    \small Nha Trang, Khanh Hoa, Vietnam $|$ 0774 653 337 $|$ \href{mailto:luanle1702@gmail.com}{\underline{luanle1702@gmail.com}} \\ \vspace{2pt}
-    \small \href{https://duyluan-portfolio-taupe.vercel.app/}{\underline{Portfolio}} $|$ \href{https://github.com/DuyLuan2107}{\underline{GitHub}} $|$ \href{https://www.linkedin.com/in/lu\%C3\%A2n-duy-743a39422/}{\underline{LinkedIn}}
+    \small Nha Trang, Khanh Hoa, Vietnam $|$ 0774 653 337 $|$ \href{mailto:luanle1702@gmail.com}{luanle1702@gmail.com} \\ \vspace{2pt}
+    \small \href{https://duyluan-portfolio-taupe.vercel.app/}{Portfolio} $|$ \href{https://github.com/DuyLuan2107}{GitHub} $|$ \href{https://www.linkedin.com/in/lu\%C3\%A2n-duy-743a39422/}{LinkedIn}
 \end{center}
 
 \section{Professional Summary}
@@ -105,7 +112,7 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{\underline{VocabLensAI}}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
+          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{VocabLensAI}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
           \resumeItemListStart
              \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, Coroutines/Flow, Room DB, CameraX, TensorFlow Lite, Gemini API, Firebase, Supabase.}
             \resumeItem{Architected and developed an offline-first Android application from scratch using Kotlin, Jetpack Compose, MVVM, and clean code practices.}
@@ -115,7 +122,7 @@
             \resumeItem{Leveraged AI coding agents (Antigravity, Codex) to accelerate boilerplate generation and refactoring, while maintaining full manual review of architecture and core business logic.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{\underline{Lung X-ray Disease Classification}}} $|$ \emph{Graduation Project, Nha Trang University}}{}
+          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Disease Classification}} $|$ \emph{Graduation Project, Nha Trang University}}{}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Python, TensorFlow/Keras, OpenCV, U-Net (Segmentation), ResNet/DenseNet (Classification).}
             \resumeItem{Developed a segmentation-guided masking pipeline to isolate lung regions in chest X-ray images before classification, improving model focus on diagnostically relevant areas and reducing noise.}
@@ -123,7 +130,7 @@
             \resumeItem{Documented the end-to-end workflow from data preprocessing and image augmentation to model evaluation, creating a foundation suitable for medical-imaging research handoffs.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{\underline{AI Fitness Coach (Android)}}} $|$ \emph{Personal Project}}{}
+          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach (Android)}} $|$ \emph{Personal Project}}{}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, MediaPipe/MLKit (Pose Estimation), Room DB, CameraX.}
             \resumeItem{Developed an offline-first Android application from scratch combining personalized workout planning, exercise tracking, and real-time form feedback.}
