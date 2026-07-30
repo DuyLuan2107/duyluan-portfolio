@@ -279,7 +279,7 @@ export default function Home() {
                         U
                       </div>
                       <div className="rounded-2xl rounded-tr-none border border-white/5 bg-gradient-to-br from-indigo-600/90 to-indigo-700/90 p-3 text-xs leading-relaxed text-white shadow-md">
-                        "I <span className="underline decoration-red-400 decoration-2">wants</span> to <span className="underline decoration-red-400 decoration-2">apply</span> FPT for internship..."
+                        "I <span className="underline decoration-red-400 decoration-2">wants</span> to <span className="underline decoration-red-400 decoration-2">apply</span> a tech company for internship..."
                       </div>
                     </motion.div>
                   )}
@@ -342,8 +342,8 @@ export default function Home() {
                       </div>
                       <div className="text-[11px] space-y-1 text-slate-300">
                         <p>❌ "wants" → <strong className="text-emerald-400">"want"</strong> (I / You / We / They)</p>
-                        <p>❌ "apply FPT" → <strong className="text-emerald-400">"apply to FPT"</strong> (Preposition rule)</p>
-                        <p className="italic text-slate-400 mt-1 font-medium">💡 Suggested sentence: "I want to apply to FPT for the internship."</p>
+                        <p>❌ "apply a tech company" → <strong className="text-emerald-400">"apply to a tech company"</strong> (Preposition rule)</p>
+                        <p className="italic text-slate-400 mt-1 font-medium">💡 Suggested sentence: "I want to apply to a tech company for the internship."</p>
                       </div>
                     </motion.div>
                   )}
@@ -754,7 +754,7 @@ export default function Home() {
               <div className="rounded-2xl border border-white/5 bg-slate-900/40 p-5 space-y-2 hover:border-white/10 transition">
                 <Award className="mx-auto text-purple-400" size={20} />
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Địa chỉ</p>
-                <p className="text-sm font-semibold text-white">Quận 8, TP. HCM</p>
+                <p className="text-sm font-semibold text-white">Nha Trang, Khánh Hòa</p>
               </div>
             </div>
           </motion.div>
