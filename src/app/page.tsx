@@ -734,8 +734,8 @@ export default function Home() {
               <div className="rounded-2xl border border-white/5 bg-slate-900/40 p-5 space-y-2 hover:border-white/10 transition">
                 <Mail className="mx-auto text-sky-400" size={20} />
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email</p>
-                <a href="mailto:hello@duyluan.dev" className="block text-sm font-semibold text-white hover:text-sky-400 transition">
-                  hello@duyluan.dev
+                <a href="mailto:luanle1702@gmail.com" className="block text-sm font-semibold text-white hover:text-sky-400 transition">
+                  luanle1702@gmail.com
                 </a>
               </div>
               <div className="rounded-2xl border border-white/5 bg-slate-900/40 p-5 space-y-2 hover:border-white/10 transition">
