@@ -24,102 +24,102 @@ interface FeatureCategory {
 const featureCategories: FeatureCategory[] = [
   {
     id: "pose_coach",
-    title: "📷 AI Pose Coach",
+    title: "📷 Trợ Lý Tư Thế AI",
     icon: "📷",
     tagline: "Trợ Lý AI Chỉnh Sửa Tư Thế Thời Gian Thực",
     description: "Tích hợp sức mạnh của Edge AI (chạy trực tiếp trên thiết bị) để phân tích 33 điểm khớp xương của cơ thể, tự động đếm số lần tập và sửa lỗi sai tư thế mà không cần kết nối mạng.",
     techStack: ["CameraX", "Google MediaPipe", "MLKit Vision", "3D Vector Math", "Room Database"],
     highlights: [
-      "Camera Live Tracking (FormCoachScreen): Xử lý hình ảnh camera 60fps để vẽ khung xương (Skeleton) trực tiếp lên cơ thể người tập.",
-      "Rule-based Angles Engine: Tự thiết kế các thuật toán đo góc 3D để nhận diện tư thế (VD: Góc gập gối của bài Squat, góc lưng của bài Plank) nhằm đưa ra cảnh báo chấn thương.",
-      "Tự động đếm Reps: Tự động hoá hoàn toàn việc đếm số lần lặp lại (Reps) và lưu trữ 100% offline."
+      "Theo Dõi Camera Trực Tiếp: Xử lý hình ảnh camera 60fps để vẽ khung xương (Skeleton) trực tiếp lên cơ thể người tập.",
+      "Thuật Toán Tính Góc: Tự thiết kế các thuật toán đo góc 3D để nhận diện tư thế (VD: Góc gập gối của bài Squat, góc lưng của bài Plank) nhằm đưa ra cảnh báo chấn thương.",
+      "Tự Động Đếm Reps: Tự động hoá hoàn toàn việc đếm số lần lặp lại (Reps) và lưu trữ 100% offline."
     ],
     reflection: "Thách thức lớn nhất là đảm bảo tốc độ phản hồi AI dưới 50ms để vẽ khung xương mượt mà. Thay vì đưa ảnh lên Cloud, tôi chọn chạy mô hình Pose Landmarker (Lite) cục bộ hoàn toàn trên GPU/CPU điện thoại bằng MediaPipe, kết hợp với luồng xử lý bất đồng bộ của CameraX để giải quyết bài toán độ trễ và bảo vệ quyền riêng tư người dùng.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Live Form Coach", desc: "Vẽ lưới xương Skeleton lên người và phân tích tư thế." },
-      { src: "/fitness-mockup.png", title: "AI Coach Home", desc: "Giao diện bắt đầu chọn bài tập Squat, Push-up, Plank." },
-      { src: "/fitness-mockup.png", title: "Bad Form Alert", desc: "Cảnh báo lỗi sai tư thế hiển thị màu đỏ." },
-      { src: "/fitness-mockup.png", title: "Progress Stats", desc: "Thống kê Form Score sau buổi tập." }
+      { src: "/fitness-mockup.png", title: "Phân Tích Trực Tiếp", desc: "Vẽ lưới xương Skeleton lên người và phân tích tư thế." },
+      { src: "/fitness-mockup.png", title: "Trang Chủ Bài Tập", desc: "Giao diện bắt đầu chọn bài tập Squat, Push-up, Plank." },
+      { src: "/fitness-mockup.png", title: "Cảnh Báo Lỗi Sai", desc: "Cảnh báo lỗi sai tư thế hiển thị màu đỏ." },
+      { src: "/fitness-mockup.png", title: "Thống Kê", desc: "Thống kê Form Score sau buổi tập." }
     ]
   },
   {
     id: "offline_library",
-    title: "📚 Offline Library",
+    title: "📚 Thư Viện Ngoại Tuyến",
     icon: "📚",
     tagline: "Thư Viện Bài Tập Khổng Lồ Siêu Tốc",
     description: "Tra cứu hàng nghìn bài tập, hình ảnh minh hoạ động và dữ liệu khoa học về cơ bắp một cách mượt mà ngay cả khi điện thoại đang ở chế độ Máy bay (Airplane mode).",
     techStack: ["Jetpack Compose LazyList", "Coil-Compose", "JSON Assets Parsing", "Coroutines"],
     highlights: [
-      "Cơ sở dữ liệu đồ sộ: Tích hợp 873 bài tập chuẩn y khoa, chia theo 7 nhóm cơ và 5 loại thiết bị tập.",
-      "Hiệu ứng ảnh động giả lập: Xử lý luân phiên 1,746 bức ảnh tĩnh (.jpg) thành dạng ảnh động (GIF) mượt mà để minh họa cách tập mà không làm tràn bộ nhớ RAM.",
-      "Truy vấn thông minh: Chức năng tìm kiếm, phân loại đa tầng (Nhóm cơ, Thiết bị, Cấp độ) phản hồi tức thì với cấu trúc dữ liệu tối ưu."
+      "Cơ Sở Dữ Liệu Đồ Sộ: Tích hợp 873 bài tập chuẩn y khoa, chia theo 7 nhóm cơ và 5 loại thiết bị tập.",
+      "Hiệu Ứng Ảnh Động Giả Lập: Xử lý luân phiên 1,746 bức ảnh tĩnh (.jpg) thành dạng ảnh động (GIF) mượt mà để minh họa cách tập mà không làm tràn bộ nhớ RAM.",
+      "Truy Vấn Thông Minh: Chức năng tìm kiếm, phân loại đa tầng (Nhóm cơ, Thiết bị, Cấp độ) phản hồi tức thì với cấu trúc dữ liệu tối ưu."
     ],
     reflection: "Thay vì dùng ảnh GIF nặng nề gây tốn hàng trăm MB RAM và lag màn hình cuộn (Scroll), tôi đã thiết kế một hệ thống \"Auto-Flip\" thông minh bằng Compose. Hệ thống này chỉ load 2 tấm ảnh JPG rất nhẹ vào bộ nhớ Cache (Coil) và cross-fade chúng tạo cảm giác động, giúp danh sách cuộn mượt mà ở 120Hz.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Exercise Detail", desc: "Chi tiết bài tập với animation mô phỏng mượt mà." },
-      { src: "/fitness-mockup.png", title: "Library Screen", desc: "Giao diện thư viện 7 nhóm cơ nổi bật." },
-      { src: "/fitness-mockup.png", title: "Smart Filters", desc: "Bộ lọc phân loại theo thiết bị, mục tiêu." },
-      { src: "/fitness-mockup.png", title: "Offline List", desc: "Danh sách thẻ bài tập hiển thị mượt mà offline." }
+      { src: "/fitness-mockup.png", title: "Chi Tiết Bài Tập", desc: "Chi tiết bài tập với animation mô phỏng mượt mà." },
+      { src: "/fitness-mockup.png", title: "Thư Viện", desc: "Giao diện thư viện 7 nhóm cơ nổi bật." },
+      { src: "/fitness-mockup.png", title: "Bộ Lọc", desc: "Bộ lọc phân loại theo thiết bị, mục tiêu." },
+      { src: "/fitness-mockup.png", title: "Danh Sách Ngoại Tuyến", desc: "Danh sách thẻ bài tập hiển thị mượt mà offline." }
     ]
   },
   {
     id: "personalized_workout",
-    title: "⚙️ Personalized Engine",
+    title: "⚙️ Thuật Toán Đề Xuất",
     icon: "⚙️",
     tagline: "Thuật Toán Đề Xuất Giáo Án Cá Nhân Hoá",
     description: "Lên lịch tập luyện hoàn chỉnh trong 7 ngày dựa trên hệ thống chấm điểm đa chiều, tối ưu hoá thời gian nghỉ ngơi và kích thích cơ bắp tối đa.",
     techStack: ["Room SQLite", "DataStore Preferences", "Scoring Algorithm", "MVVM"],
     highlights: [
-      "Recommendation Engine (ExerciseScorer): Thuật toán tự động chấm điểm và chọn lọc bài tập phù hợp dựa trên trình độ, mục tiêu và nhóm cơ đang cần hồi phục của user.",
-      "Lưu trữ Offline-first (Room DB): Quản lý toàn bộ tiến trình tập luyện (Weekly Workout Plan), cho phép người dùng tự do tuỳ chỉnh (Thêm, xóa, thay thế) bài tập.",
-      "Clean Architecture: Tách biệt hoàn toàn lớp giao diện (UI) và lớp dữ liệu (Repository), dễ dàng mở rộng và bảo trì."
+      "Thuật Toán Chấm Điểm Bài Tập: Tự động chấm điểm và chọn lọc bài tập phù hợp dựa trên trình độ, mục tiêu và nhóm cơ đang cần hồi phục của user.",
+      "Lưu Trữ Ưu Tiên Ngoại Tuyến (Room DB): Quản lý toàn bộ tiến trình tập luyện (Weekly Workout Plan), cho phép người dùng tự do tuỳ chỉnh (Thêm, xóa, thay thế) bài tập.",
+      "Kiến Trúc Tách Biệt (Clean Architecture): Tách biệt hoàn toàn lớp giao diện (UI) và lớp dữ liệu (Repository), dễ dàng mở rộng và bảo trì."
     ],
     reflection: "Tôi đã xây dựng một thuật toán 'Exercise Scorer' nội bộ (chạy ở background thread) để tự động cân bằng giáo án. Ví dụ: Nếu người dùng chọn tập ở nhà (Home Workout), hệ thống sẽ ưu tiên 100% các bài 'Bodyweight' và loại bỏ các bài tập cần dùng máy móc (Machine) ở Gym, tạo ra trải nghiệm cực kỳ cá nhân hoá.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Weekly Dashboard", desc: "Dashboard với lịch trình tập luyện tuần chi tiết." },
-      { src: "/fitness-mockup.png", title: "Onboarding Survey", desc: "Khảo sát đầu vào cá nhân hóa giáo trình." },
-      { src: "/fitness-mockup.png", title: "Custom Builder", desc: "Thay thế bài tập tùy chỉnh linh hoạt." },
-      { src: "/fitness-mockup.png", title: "User Profile", desc: "Hồ sơ sức khỏe BMI, cân nặng, chiều cao." }
+      { src: "/fitness-mockup.png", title: "Lịch Tập Hàng Tuần", desc: "Dashboard với lịch trình tập luyện tuần chi tiết." },
+      { src: "/fitness-mockup.png", title: "Khảo Sát Cá Nhân", desc: "Khảo sát đầu vào cá nhân hóa giáo trình." },
+      { src: "/fitness-mockup.png", title: "Thay Thế Bài Tập", desc: "Thay thế bài tập tùy chỉnh linh hoạt." },
+      { src: "/fitness-mockup.png", title: "Hồ Sơ Người Dùng", desc: "Hồ sơ sức khỏe BMI, cân nặng, chiều cao." }
     ]
   },
   {
     id: "oled_player",
-    title: "📱 OLED Player",
+    title: "📱 Trình Phát Chế Độ OLED",
     icon: "📱",
     tagline: "Trải Nghiệm Tập Luyện Premium OLED",
     description: "Thiết kế giao diện Dark Mode tối đa hóa hiển thị trên màn hình AMOLED, tiết kiệm pin và mang lại cảm giác sang trọng, tập trung.",
     techStack: ["Jetpack Compose Canvas", "Framer Motion", "Material Design 3", "StateFlow"],
     highlights: [
-      "Active Workout Player: Giao diện điều hướng khi đang tập (Đếm thời gian nghỉ, Next/Prev bài tập) với hiệu ứng chuyển cảnh mượt mà.",
-      "Đa ngôn ngữ (Localization): Hệ thống tự động dịch thuật và chuẩn hoá thuật ngữ thể hình tiếng Việt.",
-      "Thống kê chuyên sâu: Biểu đồ tương tác (Canvas) hiển thị tần suất tập luyện, số Reps thực hiện và tổng khối lượng tạ."
+      "Giao Diện Điều Hướng Tập Luyện: Giao diện điều hướng khi đang tập (Đếm thời gian nghỉ, Next/Prev bài tập) với hiệu ứng chuyển cảnh mượt mà.",
+      "Đa Ngôn Ngữ (Localization): Hệ thống tự động dịch thuật và chuẩn hoá thuật ngữ thể hình tiếng Việt.",
+      "Thống Kê Chuyên Sâu: Biểu đồ tương tác (Canvas) hiển thị tần suất tập luyện, số Reps thực hiện và tổng khối lượng tạ."
     ],
     reflection: "Tôi áp dụng triết lý thiết kế 'OLED-first' với nền True Black (#000000) kết hợp với các dải màu Neon. Điều này không chỉ giúp UI/UX trông cực kỳ 'Futuristic' giống các SaaS hàng đầu, mà còn tiết kiệm pin đáng kể cho người dùng khi màn hình điện thoại phải sáng liên tục trong suốt 1 giờ tập luyện.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Workout Player", desc: "Trình phát thời gian thực đếm ngược và bài tập kế tiếp." },
-      { src: "/fitness-mockup.png", title: "Sets & Reps", desc: "Theo dõi số hiệp và khối lượng tập luyện trực tiếp." },
-      { src: "/fitness-mockup.png", title: "Rest Countdown", desc: "Màn hình đếm ngược thời gian nghỉ ngơi." },
-      { src: "/fitness-mockup.png", title: "Progress Chart", desc: "Biểu đồ tần suất hoạt động hàng tuần." }
+      { src: "/fitness-mockup.png", title: "Trình Phát Tập Luyện", desc: "Trình phát thời gian thực đếm ngược và bài tập kế tiếp." },
+      { src: "/fitness-mockup.png", title: "Theo Dõi Hiệp", desc: "Theo dõi số hiệp và khối lượng tập luyện trực tiếp." },
+      { src: "/fitness-mockup.png", title: "Đếm Ngược Nghỉ Ngơi", desc: "Màn hình đếm ngược thời gian nghỉ ngơi." },
+      { src: "/fitness-mockup.png", title: "Biểu Đồ Tiến Độ", desc: "Biểu đồ tần suất hoạt động hàng tuần." }
     ]
   },
   {
     id: "voice_coach",
-    title: "🗣️ AI Voice Coach",
+    title: "🗣️ Trợ Lý Giọng Nói AI",
     icon: "🗣️",
     tagline: "Huấn Luyện Viên Cá Nhân Tại Gia",
     description: "Ngoài việc quan sát bằng Camera, ứng dụng còn tương tác trực tiếp với bạn thông qua giọng nói (Text-to-Speech), nhắc nhở sửa form và ăn mừng thành tích như một PT (Personal Trainer) thực thụ.",
     techStack: ["Android TTS (Text-To-Speech)", "Room DB Aggregation", "Jetpack Compose Canvas (Charts)"],
     highlights: [
-      "Trợ lý giọng nói (VoiceCoach): Tự động phát âm thanh cảnh báo bằng hai ngôn ngữ (Anh/Việt) khi AI phát hiện tư thế sai (VD: 'Hãy giữ lưng thẳng', 'Xuống sâu hơn chút nữa').",
-      "Mô phỏng (Mock Run): Tích hợp tính năng chạy giả lập dữ liệu cho người dùng test thử AI Form Coach mà không cần bật Camera thực.",
-      "Biểu đồ nhiệt (Heatmap) tiến độ: Vẽ biểu đồ thống kê chuyên sâu số lần tập (Reps), điểm số Form (Form Score) và lịch sử tập luyện 30 ngày qua bằng Canvas nguyên bản."
+      "Trợ Lý Giọng Nói (VoiceCoach): Tự động phát âm thanh cảnh báo bằng hai ngôn ngữ (Anh/Việt) khi AI phát hiện tư thế sai (VD: 'Hãy giữ lưng thẳng', 'Xuống sâu hơn chút nữa').",
+      "Chạy Mô Phỏng (Mock Run): Tích hợp tính năng chạy giả lập dữ liệu cho người dùng test thử AI Form Coach mà không cần bật Camera thực.",
+      "Biểu Đồ Nhiệt Tiến Độ (Heatmap): Vẽ biểu đồ thống kê chuyên sâu số lần tập (Reps), điểm số Form (Form Score) và lịch sử tập luyện 30 ngày qua bằng Canvas nguyên bản."
     ],
     reflection: "Tôi muốn biến chiếc điện thoại thành một PT thực sự. Bằng cách nối tín hiệu từ CameraX sang MediaPipe, lấy góc khớp gửi về ViewModel, cuối cùng kích hoạt Android TTS để phát ra âm thanh nhắc nhở, tạo thành một vòng lặp phản hồi thời gian thực khép kín hoàn toàn offline.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Progress Overview", desc: "Bảng tổng hợp Reps và thành tích tuyệt đẹp." },
-      { src: "/fitness-mockup.png", title: "History Charts", desc: "Biểu đồ đường trực quan theo dõi sức bền." },
-      { src: "/fitness-mockup.png", title: "Voice Settings", desc: "Tùy chỉnh Bật/Tắt huấn luyện viên giọng nói." },
-      { src: "/fitness-mockup.png", title: "AI Tips", desc: "Lời khuyên AI hiển thị sau mỗi buổi tập hoàn thành." }
+      { src: "/fitness-mockup.png", title: "Tổng Quan Tiến Độ", desc: "Bảng tổng hợp Reps và thành tích tuyệt đẹp." },
+      { src: "/fitness-mockup.png", title: "Lịch Sử Luyện Tập", desc: "Biểu đồ đường trực quan theo dõi sức bền." },
+      { src: "/fitness-mockup.png", title: "Cài Đặt Giọng Nói", desc: "Tùy chỉnh Bật/Tắt huấn luyện viên giọng nói." },
+      { src: "/fitness-mockup.png", title: "Mẹo Từ AI", desc: "Lời khuyên AI hiển thị sau mỗi buổi tập hoàn thành." }
     ]
   }
 ];
@@ -241,7 +241,7 @@ export default function FitnessCoachShowcase() {
             </div>
 
             <div className="space-y-3">
-              <h5 className="text-xs font-bold uppercase tracking-widest text-slate-500">Core Tech Stack</h5>
+              <h5 className="text-xs font-bold uppercase tracking-widest text-slate-500">Công Nghệ Lõi</h5>
               <div className="flex flex-wrap gap-2">
                 {activeCategory.techStack.map((tech) => (
                   <span key={tech} className="rounded-lg bg-slate-800/80 px-3 py-1.5 text-xs font-medium text-slate-300 border border-white/5">
