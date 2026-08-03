@@ -82,7 +82,7 @@
 \end{center}
 
 \section{Professional Summary}
-\small{Detail-oriented Mobile Developer specializing in Native Android (Kotlin, Jetpack Compose) and On-device AI/Computer Vision (TensorFlow Lite). Experienced in building performance-optimized, offline-first mobile applications with real-time ML capabilities and cloud-backed sync (Firebase, Supabase). Strong problem-solving skills and dedication to writing clean, maintainable code.}
+\small{Detail-oriented Mobile Developer specializing in Native Android (Kotlin, Jetpack Compose) and On-device AI/Computer Vision (TensorFlow Lite). Experienced in building performance-optimized, offline-first mobile applications with real-time ML capabilities and cloud-backed sync (Firebase, Supabase). Strong problem-solving skills and dedication to writing clean, maintainable code. Proven ability to bridge AI research and mobile deployment --- from model training to TFLite on-device inference.}
 
 \section{Education}
   \resumeSubHeadingListStart
@@ -90,9 +90,9 @@
       {Nha Trang University}{2022 -- 2026}
       {Bachelor of Information Technology}{Nha Trang, Vietnam}
       \resumeItemListStart
-        \resumeItem{\textbf{GPA}: 7.94/10 (3.25/4.0)}
+        \resumeItem{\textbf{GPA}: 3.25/4.0}
         \resumeItem{\textbf{Graduation Project}: Lung X-ray Disease Classification using Segmentation-guided Masking — Score: 9.1/10}
-        \resumeItem{\textbf{Relevant Coursework}: Data Structures \& Algorithms, Mobile Device Programming, Software Architecture \& Design, Image Processing, Artificial Intelligence}
+
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -101,18 +101,18 @@
     \small{\item{
      \textbf{Languages}{: Java, Kotlin, JavaScript, Python, SQL} \\
      \textbf{Mobile}{: Android SDK, Jetpack Compose, CameraX, Room DB, WorkManager, Coroutines \& Flow} \\
-     \textbf{AI / Computer Vision}{: TensorFlow Lite, MediaPipe, MLKit (Pose Estimation), YOLO, OpenCV, Gemini API} \\
+     \textbf{AI / Computer Vision}{: TensorFlow Lite, MediaPipe, MLKit (Pose Estimation), YOLO, OpenCV, Gemini API, Groq API (LLaMA)} \\
      \textbf{Backend Services}{: Firebase (Auth, Firestore, Storage), Supabase, REST API design, OkHttp} \\
      \textbf{Tools}{: Git/GitHub, Android Studio, Gradle, ADB (Android Debug Bridge), KSP, VS Code, Figma (basic)} \\
      \textbf{AI-Assisted Dev}{: Google Antigravity, OpenAI Codex} \\
-     \textbf{Languages (Spoken)}{: Vietnamese (native), English (technical reading/writing)}
+     \textbf{Languages}{: Vietnamese (Native) -- English (Intermediate - proficient in technical documentation)}
     }}
  \end{itemize}
 
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{VocabLensAI}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
+          {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{VocabLensAI}}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
           \resumeItemListStart
              \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, Coroutines/Flow, Room DB, CameraX, TensorFlow Lite, Gemini API, Firebase, Supabase.}
              \resumeItem{Developed an offline-first Android application from scratch using Kotlin, Jetpack Compose, MVVM, and clean code practices.}
@@ -121,19 +121,22 @@
              \resumeItem{Built a real-time multiplayer PvP Arena using Firebase Firestore with an ELO rating calculator, alongside a chess-style game review UI for match accuracy analysis and AI feedback.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Disease Classification}} $|$ \emph{Graduation Project, Nha Trang University}}{}
+          {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Trustworthy Classifier (Android + Research)}}} $|$ \emph{Graduation Project, NTU}}{9.1/10}
           \resumeItemListStart
-            \resumeItem{\textbf{Tech Stack}: Python, TensorFlow/Keras, OpenCV, U-Net (Segmentation), ResNet/DenseNet (Classification).}
-            \resumeItem{Solved the classification noise problem by developing a U-Net segmentation pipeline to isolate lung regions in chest X-ray images, boosting diagnostic accuracy for ResNet/DenseNet classifiers (Score: 9.1/10).}
-            \resumeItem{Documented the end-to-end medical imaging pipeline from pre-processing to Grad-CAM heatmap visualization, providing interpretable model outputs for academic evaluation.}
+            \resumeItem{\textbf{Tech Stack}: Python, TFLite, U-Net (ResNet50), YOLOv12m-cls, Kotlin, Jetpack Compose, Groq API.}
+            \resumeItem{Translated academic research into a production-grade native Android app: exported a 2-stage AI pipeline (U-Net segmentation $\rightarrow$ YOLOv12m-cls classification) to TFLite for fully offline, on-device inference across 4 pathology classes (COVID-19, Viral Pneumonia, Lung Opacity, Normal).}
+            \resumeItem{Engineered a segmentation-guided median-fill masking layer to eliminate attention leakage and shortcut learning outside lung regions; validated with EBPG (+12\% vs. raw baseline) and IoU localization across 300 annotated COVID-19 cases.}
+            \resumeItem{Built an OOD safety gate that auto-rejects non-X-ray inputs via lung-area ratio thresholding (valid range: 8--72\%), preventing the model from generating false-confident results on out-of-distribution images --- a critical safety design for medical AI prototypes.}
+            \resumeItem{Integrated dual-mode XAI (Occlusion Sensitivity on-device + Grad-CAM++ via PyTorch server) and a context-aware LLM assistant (Groq/LLaMA 3.1) grounded in Fleischner Society guidelines, with automatic offline fallback for reliable demo environments.}
+            \resumeItem{Implemented native PDF research report export (Android PdfDocument API --- zero third-party libs), benchmarked 5 backbone architectures (DenseNet121, EfficientNet-B3, ResNet50, ViT-B/16, YOLOv12m-cls) with full trustworthiness metrics displayed in-app.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach (Android)}} $|$ \emph{Personal Project}}{}
+          {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach}}} $|$ \emph{Personal Project}}{}
           \resumeItemListStart
-             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, MediaPipe/MLKit (Pose Estimation), Room DB, CameraX.}
-             \resumeItem{Developed an offline-first Android app (Kotlin, Compose, MVVM) combining personalized workout planning with real-time form feedback.}
-             \resumeItem{Addressed the injury risk of unsupervised home workouts by implementing camera-based pose estimation (MediaPipe/MLKit) to extract joint coordinates and calculate angles in real-time.}
-             \resumeItem{Built a custom rule-based feedback engine (e.g., "Keep your back straight") and automated rep counting, caching history 100\% offline via Room DB.}
+             \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, CameraX, MediaPipe/MLKit (Pose Estimation), Room DB, Text-To-Speech (TTS).}
+             \resumeItem{Developed an offline‑first Android app (MVVM) providing a comprehensive ecosystem with an 800+ exercise library and an AI‑driven personalized workout recommendation engine.}
+             \resumeItem{Addressed the injury risk of unsupervised home workouts by implementing camera‑based pose estimation (MediaPipe) to extract 33 joint coordinates and calculate 3D vector angles in real‑time (60 FPS).}
+             \resumeItem{Built a custom rule‑based feedback engine with Text‑To‑Speech integration (audio alerts) and automated rep counting, caching progress 100\% offline via Room DB.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 

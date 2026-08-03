@@ -21,6 +21,8 @@ import {
 import NavBar from "@/components/NavBar";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import LungXrayShowcase from "@/components/LungXrayShowcase";
+import FitnessCoachShowcase from "@/components/FitnessCoachShowcase";
 
 interface GithubProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
@@ -467,30 +469,83 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Project 2 & Other Research Projects */}
-          <div className="space-y-8 pt-16 border-t border-white/10">
-            <h4 className="text-xl font-bold text-white flex items-center gap-2">
-              <Cpu size={18} className="text-indigo-400" />
-              Nghiên cứu Trí tuệ Nhân tạo & Giải pháp Y tế
-            </h4>
-            
-            <div className="grid gap-8">
-              {projects.filter(p => p.title !== "VocabLensAI").map((project, idx) => {
-                const id = project.title === "Lung X-ray AI Classification" ? "lungxray" : "fitnesscoach";
-                return (
-                  <motion.div
-                    id={id}
-                    key={project.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: idx * 0.15 }}
-                  >
-                    <ProjectCard {...project} />
-                  </motion.div>
-                );
-              })}
-            </div>
+          {/* Project 2: Lung X-ray Trustworthy Classifier */}
+          <div id="lungxray" className="space-y-8 pt-16 border-t border-white/10">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap items-start justify-between gap-6"
+            >
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-400">
+                  Đồ Án Tốt Nghiệp Xuất Sắc (9.1/10)
+                </div>
+                <h3 className="text-3xl font-extrabold text-white">Lung X-ray AI Classification</h3>
+                <p className="text-slate-300 max-w-3xl text-sm leading-8">
+                  Hệ thống phân tích và chẩn đoán ảnh X-quang phổi y tế. Ứng dụng kỹ thuật phân vùng (Segmentation-guided Masking) để tự động tách vùng phổi, giúp AI tập trung chẩn đoán chính xác khu vực tổn thương.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://github.com/DuyLuan2107/lung-xray-ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/10 hover:border-white/20"
+                >
+                  <Github size={14} />
+                  GitHub Repo
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <LungXrayShowcase />
+            </motion.div>
+          </div>
+
+          {/* Project 3: AI Fitness Coach */}
+          <div id="fitnesscoach" className="space-y-8 pt-16 border-t border-white/10">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap items-start justify-between gap-6"
+            >
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">
+                  Dự Án Cá Nhân
+                </div>
+                <h3 className="text-3xl font-extrabold text-white">AI Fitness Form Coach</h3>
+                <p className="text-slate-300 max-w-3xl text-sm leading-8">
+                  Ứng dụng Android chạy offline hỗ trợ lên lịch tập luyện và sửa tư thế tập (Squat, Push-up, Plank) thời gian thực bằng mô hình Pose Estimation trên thiết bị.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                <span
+                  className="flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/5 px-5 py-3 text-xs font-bold uppercase tracking-wider text-yellow-400 cursor-help"
+                  title="Private Repository - Access can be shared upon request"
+                >
+                  Private Repo
+                </span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <FitnessCoachShowcase />
+            </motion.div>
           </div>
         </section>
 
