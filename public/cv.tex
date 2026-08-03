@@ -91,7 +91,6 @@
       {Bachelor of Information Technology}{Nha Trang, Vietnam}
       \resumeItemListStart
         \resumeItem{\textbf{GPA}: 3.25/4.0}
-        \resumeItem{\textbf{Graduation Project}: Lung X-ray Disease Classification using Segmentation-guided Masking — Score: 9.1/10}
 
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -103,7 +102,7 @@
      \textbf{Mobile}{: Android SDK, Jetpack Compose, CameraX, Room DB, WorkManager, Coroutines \& Flow} \\
      \textbf{AI / Computer Vision}{: TensorFlow Lite, MediaPipe, MLKit (Pose Estimation), YOLO, OpenCV, Gemini API, Groq API (LLaMA)} \\
      \textbf{Backend Services}{: Firebase (Auth, Firestore, Storage), Supabase, REST API design, OkHttp} \\
-     \textbf{Tools}{: Git/GitHub, Android Studio, Gradle, ADB (Android Debug Bridge), KSP, VS Code, Figma (basic)} \\
+     \textbf{Tools}{: Git/GitHub, Android Studio, Gradle, ADB (Android Debug Bridge), KSP, VS Code} \\
      \textbf{AI-Assisted Dev}{: Google Antigravity, OpenAI Codex} \\
      \textbf{Languages}{: Vietnamese (Native) -- English (Intermediate - proficient in technical documentation)}
     }}
@@ -124,11 +123,10 @@
           {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Trustworthy Classifier (Android + Research)}}} $|$ \emph{Graduation Project, NTU}}{9.1/10}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Python, TFLite, U-Net (ResNet50), YOLOv12m-cls, Kotlin, Jetpack Compose, Groq API.}
-            \resumeItem{Translated academic research into a production-grade native Android app: exported a 2-stage AI pipeline (U-Net segmentation $\rightarrow$ YOLOv12m-cls classification) to TFLite for fully offline, on-device inference across 4 pathology classes (COVID-19, Viral Pneumonia, Lung Opacity, Normal).}
-            \resumeItem{Engineered a segmentation-guided median-fill masking layer to eliminate attention leakage and shortcut learning outside lung regions; validated with EBPG (+12\% vs. raw baseline) and IoU localization across 300 annotated COVID-19 cases.}
-            \resumeItem{Built an OOD safety gate that auto-rejects non-X-ray inputs via lung-area ratio thresholding (valid range: 8--72\%), preventing the model from generating false-confident results on out-of-distribution images --- a critical safety design for medical AI prototypes.}
-            \resumeItem{Integrated dual-mode XAI (Occlusion Sensitivity on-device + Grad-CAM++ via PyTorch server) and a context-aware LLM assistant (Groq/LLaMA 3.1) grounded in Fleischner Society guidelines, with automatic offline fallback for reliable demo environments.}
-            \resumeItem{Implemented native PDF research report export (Android PdfDocument API --- zero third-party libs), benchmarked 5 backbone architectures (DenseNet121, EfficientNet-B3, ResNet50, ViT-B/16, YOLOv12m-cls) with full trustworthiness metrics displayed in-app.}
+            \resumeItem{Deployed a 2-stage AI pipeline (U-Net segmentation $\rightarrow$ YOLOv12m-cls classification) to a native Android app via TFLite, enabling fully offline on-device inference across 4 pathology classes (COVID-19, Viral Pneumonia, Lung Opacity, Normal).}
+            \resumeItem{Engineered median-fill masking to eliminate attention leakage outside lung regions, validated with EBPG (+12\% vs. baseline) and IoU localization across 300 annotated cases.}
+            \resumeItem{Built an OOD safety gate (lung-area ratio thresholding, 8--72\% valid range) to auto-reject invalid inputs, and integrated dual-mode XAI (Occlusion Sensitivity + Grad-CAM++).}
+            \resumeItem{Added a context-aware LLM assistant (Groq/LLaMA 3.1, Fleischner-guideline grounded) and native PDF report export, benchmarked against 5 backbone architectures.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach}}} $|$ \emph{Personal Project}}{}
