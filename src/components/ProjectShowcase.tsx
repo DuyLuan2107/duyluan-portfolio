@@ -35,7 +35,7 @@ const featureCategories: FeatureCategory[] = [
       "Sinh truyện ngắn AI (AiStoryDialog): Tự động tổng hợp các từ vựng đã quét thành một câu chuyện tiếng Anh ngắn gọn bằng Gemini API để học sinh động theo ngữ cảnh.",
       "Lịch sử quét từ (HistoryScan): Lưu trữ toàn bộ lịch sử các hình ảnh và từ vựng đã quét qua camera giúp người dùng dễ dàng ôn tập lại bất cứ lúc nào."
     ],
-    reflection: "Để đạt tốc độ phản hồi tối ưu dưới 100ms, mô hình YOLOv8-tflite được nén và chạy trực tiếp offline trên CPU/GPU điện thoại (Edge AI) để quét vật thể, trong khi Gemini API được sử dụng trực tuyến để viết truyện thông minh.",
+    reflection: "Để đạt tốc độ phản hồi tối ưu dưới 100ms, mô hình YOLO11m-tflite (INT8) được nén và chạy trực tiếp offline trên CPU/GPU điện thoại (Edge AI) để quét vật thể, trong khi Gemini API được sử dụng trực tuyến để viết truyện thông minh.",
     screenshots: [
       { src: "/Portfolio_Assets/Screenshots/05_camera_scanner.png", title: "Camera AI Scanner", desc: "Quét vật thể thực tế qua camera vật lý và dịch nghĩa tự động." },
       { src: "/Portfolio_Assets/Screenshots/07_aria_chatbot.png", title: "Aria AI Chatbot", desc: "Đàm thoại tiếng Anh 1v1 và sửa lỗi ngữ pháp trực quan." },

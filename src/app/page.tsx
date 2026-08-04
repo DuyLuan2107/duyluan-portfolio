@@ -51,7 +51,7 @@ const skillGroups = [
   {
     label: "AI & Data Science",
     icon: <Sparkles className="text-indigo-400" size={18} />,
-    skills: ["Python", "TensorFlow Lite (Edge AI)", "PyTorch", "YOLOv8", "Gemini API", "OpenCV"],
+    skills: ["Python", "TensorFlow Lite (Edge AI)", "PyTorch", "YOLO11m (INT8)", "Gemini API", "OpenCV"],
   },
   {
     label: "Backend & Database",
@@ -761,7 +761,7 @@ export default function Home() {
                 <ul className="text-xs leading-6 text-slate-400 list-disc list-inside space-y-2">
                   <li>Xây dựng hoàn chỉnh ứng dụng native Android VocabLensAI 24 màn hình.</li>
                   <li>Hoàn thành Đồ án phân loại ảnh X-quang phổi xuất sắc (9.1/10 điểm).</li>
-                  <li>Làm chủ luồng xử lý mô hình học sâu cục bộ (Edge AI YOLOv8/TFLite).</li>
+                  <li>Làm chủ luồng xử lý mô hình học sâu cục bộ (Edge AI YOLO11m/TFLite).</li>
                   <li>Xây dựng thói quen quản lý Git khoa học và viết tài liệu kỹ thuật hoàn chỉnh.</li>
                 </ul>
               </div>
