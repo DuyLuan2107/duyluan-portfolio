@@ -24,7 +24,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\renewcommand{\baselinestretch}{0.97}
+\renewcommand{\baselinestretch}{1.0}
 
 \urlstyle{same}
 
@@ -32,8 +32,8 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-11pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
 \pdfgentounicode=1
 
@@ -55,7 +55,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-3.5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -64,8 +64,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2.5pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
@@ -77,7 +77,7 @@
 \end{center}
 
 \section{Professional Summary}
-\small{Mobile Developer specializing in Kotlin, Jetpack Compose, and on-device AI applications. Experienced in designing offline-first Android apps with modern architecture (Clean Architecture, MVVM, Room, CameraX) and deploying TensorFlow Lite models for real-time edge inference. Passionate about building performant applications that combine excellent user experience with practical AI capabilities.}
+\small{Android \& AI Engineer specializing in Kotlin, Jetpack Compose, and on-device AI applications. Built end-to-end Android applications using Clean Architecture, MVVM, CameraX, and TensorFlow Lite, with a focus on offline-first experiences and efficient on-device inference.}
 
 \section{Education}
   \resumeSubHeadingListStart
@@ -93,13 +93,13 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming Languages}{: Kotlin, Java, Python, SQL, JavaScript} \\
+     \textbf{Architecture}{: Clean Architecture, MVVM, Repository Pattern, StateFlow, Coroutines} \\
      \textbf{Android}{: Jetpack Compose, CameraX, Room, WorkManager, Navigation, Paging3, DataStore} \\
-     \textbf{Architecture}{: Clean Architecture, MVVM, Repository Pattern, Dependency Injection, StateFlow, Coroutines} \\
-     \textbf{AI \& CV}{: TensorFlow Lite, MediaPipe, ML Kit, OpenCV, YOLO (Classification)} \\
+     \textbf{AI \& CV}{: TensorFlow Lite, MediaPipe, ML Kit, OpenCV, YOLO (Detection \& Classification)} \\
      \textbf{Backend \& Cloud}{: Firebase, Supabase, REST API, Retrofit, OkHttp} \\
+     \textbf{Programming Languages}{: Kotlin, Java, Python, SQL, JavaScript} \\
      \textbf{Tools}{: Git, Android Studio, Gradle, ADB, KSP, VS Code} \\
-     \textbf{Languages}{: Vietnamese (Native) -- English (Intermediate, comfortable reading technical docs)}
+     \textbf{Languages}{: Vietnamese (Native) -- English (Intermediate, comfortable reading technical documentation)}
     }}
  \end{itemize}
 
@@ -109,17 +109,17 @@
           {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#vocablensai}{VocabLensAI}}} — Native Android English Learning Platform $|$ \emph{Personal Project}}{}
           \resumeItemListStart
              \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, Coroutines/Flow, Room DB, CameraX, YOLO11m (TFLite, INT8), Gemini API, Firebase, Supabase.}
-             \resumeItem{Designed and developed a production-scale offline-first Android application using Kotlin, Jetpack Compose, MVVM, and Clean Architecture, supporting AI-powered vocabulary learning with real-time object recognition.}
-             \resumeItem{Implemented real-time on-device object detection using a YOLO11m model (INT8-quantized, exported to TFLite) via CameraX, integrating Gemini AI to generate contextual vocabulary stories.}
-             \resumeItem{Addressed the ``forgetting curve'' problem in language learning by designing a custom SM-2 Spaced Repetition engine that automatically schedules reviews at optimal intervals, backed by a hybrid Room DB/Firestore sync system to ensure reliable offline data sync.}
+             \resumeItem{Designed and developed an offline-first Android application using Kotlin, Jetpack Compose, MVVM, and Clean Architecture, supporting AI-powered vocabulary learning with real-time object recognition.}
+             \resumeItem{Implemented real-time on-device object detection using an INT8-quantized YOLO11m model deployed with TensorFlow Lite and CameraX, while integrating the Gemini API as an optional cloud service for contextual vocabulary story generation.}
+             \resumeItem{Implemented the SM-2 spaced repetition algorithm to optimize vocabulary review scheduling, backed by a hybrid Room DB/Firestore synchronization mechanism for reliable offline-first data consistency.}
              \resumeItem{Built a real-time multiplayer PvP Arena using Firebase Firestore with an ELO rating calculator, alongside a chess-style game review UI for match accuracy analysis and AI feedback.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Trustworthy Classifier (Android + Research)}}} $|$ \emph{Graduation Project, NTU}}{9.1/10}
+          {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#lungxray}{Lung X-ray Trustworthy Classifier (Android + Research)}}} $|$ \emph{Graduation Project, NTU}}{ (Final Grade: 9.1/10)}
           \resumeItemListStart
             \resumeItem{\textbf{Tech Stack}: Python, TFLite, U-Net (ResNet50), YOLOv12m-cls, Kotlin, Jetpack Compose, Groq API.}
             \resumeItem{Deployed a 2-stage AI pipeline (U-Net segmentation $\rightarrow$ YOLOv12m-cls image classification) to a native Android app via TFLite, enabling fully offline on-device inference across 4 pathology classes (COVID-19, Viral Pneumonia, Lung Opacity, Normal).}
-            \resumeItem{Improved model reliability by engineering median-fill masking to remove non-lung visual artifacts before classification, increasing explainability scores and localization accuracy across 300 annotated cases.}
+            \resumeItem{Improved model reliability by engineering median-fill masking to remove non-lung visual artifacts before classification, improving visual localization and model interpretability. The model was trained on nearly 12,000 chest X-ray images and evaluated on 300 expert-annotated localization cases.}
             \resumeItem{Built an OOD safety gate (lung-area ratio thresholding, 8--72\% valid range) to auto-reject invalid inputs, and integrated dual-mode XAI (Occlusion Sensitivity + Grad-CAM++).}
             \resumeItem{Added a context-aware LLM assistant (Groq/LLaMA 3.1, Fleischner-guideline grounded) and native PDF report export, benchmarked against 5 backbone architectures.}
           \resumeItemListEnd
@@ -127,8 +127,8 @@
           {\textbf{\underline{\href{https://duyluan-portfolio-taupe.vercel.app/\#fitnesscoach}{AI Fitness Coach}}} $|$ \emph{Personal Project}}{}
           \resumeItemListStart
              \resumeItem{\textbf{Tech Stack}: Kotlin, Jetpack Compose, CameraX, MediaPipe/MLKit (Pose Estimation), Room DB, Text-To-Speech (TTS).}
-             \resumeItem{Developed an offline-first Android app (MVVM) providing a comprehensive ecosystem with an 800+ exercise library and an AI-driven personalized workout recommendation engine.}
-             \resumeItem{Addressed the injury risk of unsupervised home workouts by implementing camera-based pose estimation (MediaPipe) to extract 33 keypoints and calculate 3D vector angles in real-time (60 FPS, $<20$ms latency).}
+             \resumeItem{Developed an offline-first Android fitness application featuring an 800+ exercise library and a personalized workout recommendation engine built with Kotlin, Jetpack Compose, and Room.}
+             \resumeItem{Addressed the injury risk of unsupervised home workouts by implementing camera-based pose estimation (MediaPipe) to extract 33 keypoints and calculate 3D vector angles in real-time.}
              \resumeItem{Built a custom rule-based feedback engine with Text-To-Speech integration (audio alerts) and automated rep counting, caching progress 100\% offline via Room DB.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd

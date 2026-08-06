@@ -36,10 +36,10 @@ const featureCategories: FeatureCategory[] = [
     ],
     reflection: "Thách thức lớn nhất là đảm bảo tốc độ phản hồi AI dưới 50ms để vẽ khung xương mượt mà. Thay vì đưa ảnh lên Cloud, tôi chọn chạy mô hình Pose Landmarker (Lite) cục bộ hoàn toàn trên GPU/CPU điện thoại bằng MediaPipe, kết hợp với luồng xử lý bất đồng bộ của CameraX để giải quyết bài toán độ trễ và bảo vệ quyền riêng tư người dùng.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Phân Tích Trực Tiếp", desc: "Vẽ lưới xương Skeleton lên người và phân tích tư thế." },
-      { src: "/fitness-mockup.png", title: "Trang Chủ Bài Tập", desc: "Giao diện bắt đầu chọn bài tập Squat, Push-up, Plank." },
-      { src: "/fitness-mockup.png", title: "Cảnh Báo Lỗi Sai", desc: "Cảnh báo lỗi sai tư thế hiển thị màu đỏ." },
-      { src: "/fitness-mockup.png", title: "Thống Kê", desc: "Thống kê Form Score sau buổi tập." }
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/01_pose_analysis.png", title: "Phân Tích Trực Tiếp", desc: "Vẽ lưới xương Skeleton lên người và phân tích tư thế." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/02_exercise_home.png", title: "Trang Chủ Bài Tập", desc: "Giao diện bắt đầu chọn bài tập Squat, Push-up, Plank." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/03_pose_warning.png", title: "Cảnh Báo Lỗi Sai", desc: "Cảnh báo lỗi sai tư thế hiển thị màu đỏ." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/04_form_score.png", title: "Thống Kê", desc: "Thống kê Form Score sau buổi tập." }
     ]
   },
   {
@@ -56,10 +56,10 @@ const featureCategories: FeatureCategory[] = [
     ],
     reflection: "Thay vì dùng ảnh GIF nặng nề gây tốn hàng trăm MB RAM và lag màn hình cuộn (Scroll), tôi đã thiết kế một hệ thống \"Auto-Flip\" thông minh bằng Compose. Hệ thống này chỉ load 2 tấm ảnh JPG rất nhẹ vào bộ nhớ Cache (Coil) và cross-fade chúng tạo cảm giác động, giúp danh sách cuộn mượt mà ở 120Hz.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Chi Tiết Bài Tập", desc: "Chi tiết bài tập với animation mô phỏng mượt mà." },
-      { src: "/fitness-mockup.png", title: "Thư Viện", desc: "Giao diện thư viện 7 nhóm cơ nổi bật." },
-      { src: "/fitness-mockup.png", title: "Bộ Lọc", desc: "Bộ lọc phân loại theo thiết bị, mục tiêu." },
-      { src: "/fitness-mockup.png", title: "Danh Sách Ngoại Tuyến", desc: "Danh sách thẻ bài tập hiển thị mượt mà offline." }
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/05_exercise_detail.png", title: "Chi Tiết Bài Tập", desc: "Chi tiết bài tập với animation mô phỏng mượt mà." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/06_library_categories.png", title: "Thư Viện", desc: "Giao diện thư viện 7 nhóm cơ nổi bật." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/07_library_filter.png", title: "Bộ Lọc", desc: "Bộ lọc phân loại theo thiết bị, mục tiêu." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/08_offline_list.png", title: "Danh Sách Ngoại Tuyến", desc: "Danh sách thẻ bài tập hiển thị mượt mà offline." }
     ]
   },
   {
@@ -76,10 +76,10 @@ const featureCategories: FeatureCategory[] = [
     ],
     reflection: "Tôi đã xây dựng một thuật toán 'Exercise Scorer' nội bộ (chạy ở background thread) để tự động cân bằng giáo án. Ví dụ: Nếu người dùng chọn tập ở nhà (Home Workout), hệ thống sẽ ưu tiên 100% các bài 'Bodyweight' và loại bỏ các bài tập cần dùng máy móc (Machine) ở Gym, tạo ra trải nghiệm cực kỳ cá nhân hoá.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Lịch Tập Hàng Tuần", desc: "Dashboard với lịch trình tập luyện tuần chi tiết." },
-      { src: "/fitness-mockup.png", title: "Khảo Sát Cá Nhân", desc: "Khảo sát đầu vào cá nhân hóa giáo trình." },
-      { src: "/fitness-mockup.png", title: "Thay Thế Bài Tập", desc: "Thay thế bài tập tùy chỉnh linh hoạt." },
-      { src: "/fitness-mockup.png", title: "Hồ Sơ Người Dùng", desc: "Hồ sơ sức khỏe BMI, cân nặng, chiều cao." }
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/09_weekly_plan.png", title: "Lịch Tập Hàng Tuần", desc: "Dashboard với lịch trình tập luyện tuần chi tiết." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/10_onboarding_survey.png", title: "Khảo Sát Cá Nhân", desc: "Khảo sát đầu vào cá nhân hóa giáo trình." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/11_replace_exercise.png", title: "Thay Thế Bài Tập", desc: "Thay thế bài tập tùy chỉnh linh hoạt." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/12_user_profile.png", title: "Hồ Sơ Người Dùng", desc: "Hồ sơ sức khỏe BMI, cân nặng, chiều cao." }
     ]
   },
   {
@@ -96,10 +96,10 @@ const featureCategories: FeatureCategory[] = [
     ],
     reflection: "Tôi áp dụng triết lý thiết kế 'OLED-first' với nền True Black (#000000) kết hợp với các dải màu Neon. Điều này không chỉ giúp UI/UX trông cực kỳ 'Futuristic' giống các SaaS hàng đầu, mà còn tiết kiệm pin đáng kể cho người dùng khi màn hình điện thoại phải sáng liên tục trong suốt 1 giờ tập luyện.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Trình Phát Tập Luyện", desc: "Trình phát thời gian thực đếm ngược và bài tập kế tiếp." },
-      { src: "/fitness-mockup.png", title: "Theo Dõi Hiệp", desc: "Theo dõi số hiệp và khối lượng tập luyện trực tiếp." },
-      { src: "/fitness-mockup.png", title: "Đếm Ngược Nghỉ Ngơi", desc: "Màn hình đếm ngược thời gian nghỉ ngơi." },
-      { src: "/fitness-mockup.png", title: "Biểu Đồ Tiến Độ", desc: "Biểu đồ tần suất hoạt động hàng tuần." }
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/13_workout_player.png", title: "Trình Phát Tập Luyện", desc: "Trình phát thời gian thực đếm ngược và bài tập kế tiếp." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/14_set_tracker.png", title: "Theo Dõi Hiệp", desc: "Theo dõi số hiệp và khối lượng tập luyện trực tiếp." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/15_rest_timer.png", title: "Đếm Ngược Nghỉ Ngơi", desc: "Màn hình đếm ngược thời gian nghỉ ngơi." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/16_activity_chart.png", title: "Biểu Đồ Tiến Độ", desc: "Biểu đồ tần suất hoạt động hàng tuần." }
     ]
   },
   {
@@ -116,10 +116,10 @@ const featureCategories: FeatureCategory[] = [
     ],
     reflection: "Tôi muốn biến chiếc điện thoại thành một PT thực sự. Bằng cách nối tín hiệu từ CameraX sang MediaPipe, lấy góc khớp gửi về ViewModel, cuối cùng kích hoạt Android TTS để phát ra âm thanh nhắc nhở, tạo thành một vòng lặp phản hồi thời gian thực khép kín hoàn toàn offline.",
     screenshots: [
-      { src: "/fitness-mockup.png", title: "Tổng Quan Tiến Độ", desc: "Bảng tổng hợp Reps và thành tích tuyệt đẹp." },
-      { src: "/fitness-mockup.png", title: "Lịch Sử Luyện Tập", desc: "Biểu đồ đường trực quan theo dõi sức bền." },
-      { src: "/fitness-mockup.png", title: "Cài Đặt Giọng Nói", desc: "Tùy chỉnh Bật/Tắt huấn luyện viên giọng nói." },
-      { src: "/fitness-mockup.png", title: "Mẹo Từ AI", desc: "Lời khuyên AI hiển thị sau mỗi buổi tập hoàn thành." }
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/17_progress_summary.png", title: "Tổng Quan Tiến Độ", desc: "Bảng tổng hợp Reps và thành tích tuyệt đẹp." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/18_workout_history.png", title: "Lịch Sử Luyện Tập", desc: "Biểu đồ đường trực quan theo dõi sức bền." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/19_voice_settings.png", title: "Cài Đặt Giọng Nói", desc: "Tùy chỉnh Bật/Tắt huấn luyện viên giọng nói." },
+      { src: "/Portfolio_Assets/Screenshots/FitnessCoach/20_ai_tips.png", title: "Mẹo Từ AI", desc: "Lời khuyên AI hiển thị sau mỗi buổi tập hoàn thành." }
     ]
   }
 ];
